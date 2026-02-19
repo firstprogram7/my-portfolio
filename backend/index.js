@@ -6,16 +6,10 @@ const mongoose = require("mongoose");
 const User = require("./model/user");
 const PORT = process.env.PORT || 5000;
 // Mongoose set up
-let isConnected = false; // Track the connection state
 async function connectDB() {
-  if (isConnected) {
-    console.log("Using existing MongoDB connection!");
-    return;
-  }
+
   try {
-    const db = await mongoose.connect(process.env.MONGODB_URI);
-    // Check if the connection is successful (readState 1 means connected)
-    isConnected = db.connections[0].readyState;
+    await mongoose.connect(process.env.MONGODB_URI);
     console.log("Connected to MongoDB!");
   } catch (err) {
     console.error("Couldn't connect to MongoDB", err);
@@ -28,16 +22,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
-// Middleware to ensure DB is connected for every request
-app.use(async (req, res, next) => {
-  try {
-    await connectDB();
-    next();
-  } catch (err) {
-    res.status(500).send("Internal Server Error: Database Connection Failed");
-  }
-});
 
+// Route for health check
+app.get("/ping",(req,res)=>{
+  res.send(200).send("Awake");
+})
 
 // Route for main profile
 app.get("/", (req, res) => {
@@ -86,15 +75,6 @@ app.post("/contact", async (req, res) => {
   res.redirect("/contact");
 });
 
-// app.listen(PORT, () => {
-//   console.log(`Listening to port ${PORT}`);
-// });
-// DELETE your old app.listen() and paste this:
-
-if (process.env.NODE_ENV !== 'production') {
-  app.listen(PORT, () => {
-    console.log(`Listening to port ${PORT}`);
-  });
-}
-
-module.exports = app;
+app.listen(PORT, () => {
+  console.log(`Listening to port ${PORT}`);
+});
