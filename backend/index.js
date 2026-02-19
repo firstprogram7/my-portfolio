@@ -7,16 +7,34 @@ const User = require("./model/user");
 const PORT = process.env.PORT || 5000;
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
+// Middleware to ensure DB is connected for every request
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (err) {
+    res.status(500).send("Internal Server Error: Database Connection Failed");
+  }
+});
 app.use(express.json());
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
+
 // Mongoose set up
+let isConnected = false; // Track the connection state
 async function connectDB() {
+  if (isConnected) {
+    console.log("Using existing MongoDB connection!");
+    return;
+  }
   try {
-    await mongoose.connect(process.env.MONGODB_URI);
+    const db = await mongoose.connect(process.env.MONGODB_URI);
+    // Check if the connection is successful (readState 1 means connected)
+    isConnected = db.connections[0].readyState;
     console.log("Connected to MongoDB!");
   } catch (err) {
     console.error("Couldn't connect to MongoDB", err);
+    throw err;
   }
 }
 connectDB();
@@ -37,7 +55,7 @@ app.post("/blogs", async (req, res) => {
     message: "N/A",
   });
   await Subscriber.save();
-  res.json({success:true})
+  res.json({ success: true });
 });
 //Route for sub-blogs
 app.get("/blogs/:blog", (req, res) => {
