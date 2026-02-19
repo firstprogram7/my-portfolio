@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "tailwindcss -i ./backend/public/styles.css -o ./backend/public/output.css --watch",
-    "build":"tailwindcss -i ./backend/public/styles.css -o ./backend/public/output.css"
+    "build":"tailwindcss -i ./backend/public/styles.css -o ./backend/public/output.css",
+    "start": "node backend/index.js"
   },
   "keywords": [],
   "author": "",
