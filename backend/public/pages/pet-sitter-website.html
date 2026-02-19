@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Sitters Project</title>
+    <!-- <script src="https://cdn.tailwindcss.com/3.4.17"></script> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../output.css" />
+  </head>
+  <body>
+    <!-- Dark theme toggle -->
+    <div class="flex justify-end pr-7 pt-5">
+      <div
+        class="switch px-4 py-1 rounded-full space-x-2 bg-stone-100 hover:bg-stone-200 dark:bg-stone-700 dark:border-transparent border border-stone-300 shadow-sm duration-300"
+      >
+        <i class="fa-regular fa-sun dark:text-stone-500 cursor-pointer"></i
+        ><i class="fa-solid fa-moon text-stone-300 cursor-pointer"></i>
+      </div>
+    </div>
+    <!-- Navbar -->
+    <header class="relative z-50">
+      <nav class="container mx-auto">
+        <div class="flex justify-between items-center px-4 py-4">
+    
+          <!-- Logo -->
+          <a href="/" class="text-4xl font-bold md:text-5xl">Shazid</a>
+    
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex space-x-6">
+            <a href="#about" class="hover:text-orange-400 md:text-xl lg:text-2xl">About</a>
+            <a href="#experience" class="hover:text-orange-400 md:text-xl lg:text-2xl">Experience</a>
+            <a href="#projects" class="hover:text-orange-400 md:text-xl lg:text-2xl">Projects</a>
+            <a href="/blogs" class="hover:text-orange-400 md:text-xl lg:text-2xl">Blog</a>
+            <a href="/contact" class="hover:text-orange-400 md:text-xl lg:text-2xl">Contact Me</a>
+          </div>
+    
+          <!-- Hamburger Button -->
+          <button id="hamburger" class="md:hidden flex flex-col gap-1.5">
+            <span class="h-1 w-8 bg-textColorDark dark:bg-textOffWhite block transition-all"></span>
+            <span class="h-1 w-8 bg-textColorDark dark:bg-textOffWhite block transition-all"></span>
+            <span class="h-1 w-8 bg-textColorDark dark:bg-textOffWhite block transition-all"></span>
+          </button>
+        </div>
+    
+        <!-- MOBILE MENU (ABSOLUTE) -->
+        <div
+          id="mobileMenu"
+          class="absolute left-0 top-full w-full bg-textOffWhite dark:bg-darkBackground  shadow-lg py-10 px-6 space-y-6 text-lg text-center font-bold transform scale-y-0 origin-top transition-all duration-300 md:hidden"
+        >
+          <a href="#about" class="block hover:text-orange-400">About</a>
+          <a href="#experience" class="block hover:text-orange-400">Experience</a>
+          <a href="#projects" class="block hover:text-orange-400">Projects</a>
+          <a href="/blogs" class="block hover:text-orange-400">Blog</a>
+          <a href="/contact" class="block hover:text-orange-400">Contact Me</a>
+        </div>
+      </nav>
+    </header>
+    <!-- Project Gist-->
+    <section class="max-w-6xl mx-auto px-6 py-16">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <!-- Text Content -->
+        <div class="flex-1 scroll-animation from-left">
+          <h2 class="text-3xl md:text-4xl font-semibold">Pet Sitter Website</h2>
+          <hr class="my-4 border-gray-300" />
+
+          <div
+            class="flex justify-between text-textColorLight font-medium md:text-xl px-3"
+          >
+            <h4>Pet Sitters</h4>
+            <h4>August 2024</h4>
+          </div>
+
+          <div class="space-y-4 text-xl mt-8 leading-relaxed">
+            <p>
+              The Pet Sitters Cape Town homepage was in need of some love, so I
+              gave it a complete facelift.
+            </p>
+
+            <p>
+              This case study highlights how the redesign aligns with best
+              practices for modern pet-care websites:
+            </p>
+
+            <ul class="list-disc list-inside space-y-1">
+              <li>credible messaging</li>
+              <li>social proof</li>
+              <li>clear CTAs</li>
+              <li>detailed services</li>
+              <li>value-driven copy</li>
+            </ul>
+
+            <p>
+              With a few refinements especially around visuals,
+              mobile-friendliness, and navigation simplification the website now
+              better supports conversions, builds trust, and strengthens brand
+              differentiation.
+            </p>
+          </div>
+        </div>
+
+        <!-- Image -->
+        <div class="flex-1 max-w-lg scroll-animation from-right">
+          <img
+            src="/img/petsitter.jpg"
+            alt="Pet sitter website image"
+            class="w-full rounded-lg shadow "
+          />
+        </div>
+      </div>
+    </section>
+
+    <hr class="max-w-5xl mx-auto border-gray-300" />
+
+    <!-- FEATURED WEBSITE ANNOTATION -->
+    <section class="max-w-6xl mx-auto px-6 mt-20">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl md:text-5xl font-semibold">
+          Conversion-Focused Features Explained
+        </h2>
+      </div>
+
+      <img
+        src="/img/project1_withTags.png"
+        alt="Annotated screenshot of pet sitter website"
+        class="w-full rounded-lg shadow"
+      />
+    </section>
+
+    <!-- THE CHALLENGE -->
+    <section class="max-w-4xl mx-auto px-6 mt-24">
+      <h2 class="text-3xl md:text-5xl font-semibold mb-10">The Challenge</h2>
+
+      <div class="text-xl space-y-6 leading-relaxed">
+        <p>
+          The Pet Sitters Cape Town website had not been refreshed in some time,
+          and several known user challenges were starting to impact the customer
+          experience.
+        </p>
+
+        <p>
+          Our goal was to modernise the look and feel, clarify the service
+          offering, and make it easier for pet owners to submit booking or
+          service queries.
+        </p>
+
+        <p>
+          A key constraint was that the existing backend needed to remain
+          intact, so all improvements had to be achieved through front-end
+          restructuring, UX enhancements, and visual design updates.
+        </p>
+
+        <p>
+          When reviewing the previous version of the homepage, it became clear
+          that the design attempted to place as much as possible above the fold
+          likely due to older marketing assumptions.
+        </p>
+
+        <p>
+          While it was impressive how much content was squeezed into the top
+          section, it created a dense, cluttered layout with many competing
+          elements. This made it difficult for new visitors to understand the
+          services offered and how to book.
+        </p>
+
+        <p>
+          Using insights from user behaviour and client feedback, we redesigned
+          the homepage to guide visitors through a clearer narrative:
+        </p>
+
+        <p class="text-2xl font-semibold">
+          Who we are → What we do → Why we’re trusted → How to book.
+        </p>
+      </div>
+    </section>
+
+    <!-- SKETCH TO CODE -->
+    <section class="max-w-6xl mx-auto px-6 my-20 space-y-10">
+      <h2 class="text-3xl text-center md:text-4xl font-semibold">
+        From Sketch → Code
+      </h2>
+
+      <img
+        src="/img/sketch1.jpg"
+        alt="Website sketch"
+        class="w-full rounded-lg shadow"
+      />
+      <div class="text-xl max-w-4xl mx-auto px-6">
+        <p>
+          When I dream up a new interface, I love starting with paper—sketching
+          out each component, cutting them free, and arranging them on a bigger
+          page with Blu-Tack. It feels a bit like building a joyful UI jigsaw
+          puzzle(as seen in above sketch).
+        </p>
+        <p>
+          This playful approach makes it easy to shift pieces around, explore
+          new ideas, and refine parts of the design without redrawing everything
+          from scratch. Once the page’s layout takes shape, we dive into more
+          detailed, lively sketches of each module.
+        </p>
+        <p>
+          I’ll go through the basic thought process behind each module design
+          separately below.
+        </p>
+      </div>
+    </section>
+    <!-- Section 01 -->
+    <section class="max-w-4xl mx-auto px-6 mt-24">
+      <!-- Title -->
+      <h2 class="text-3xl md:text-4xl font-bold mb-10">
+        Case Study: Redesigning the Pet Sitters Cape Town Website
+      </h2>
+
+      <!-- Overview -->
+      <div class="space-y-6 mb-12">
+        <h2 class="text-2xl font-semibold">Overview</h2>
+        <div class="text-xl">
+          <p>
+            Pet Sitters Cape Town is an established home-based pet-care service
+            with thousands of successful visits and a strong reputation in the
+            Cape Town area. Although the business had grown significantly over
+            the years, its website had not kept pace. As a result, several
+            user-experience issues were beginning to impact customer
+            understanding, trust clarity, and conversion rates.
+          </p>
+          <p>
+            My objective was to modernise the website, improve how services were
+            communicated, and create a simpler, more intuitive path for pet
+            owners to make enquiries or bookings all while working within the
+            constraints of the existing backend system.
+          </p>
+        </div>
+      </div>
+
+      <div class="space-y-6 mb-12">
+        <h2 class="text-2xl font-semibold">01. Understanding the Problem</h2>
+        <div class="text-xl">
+          <p>
+            Before the redesign, the homepage attempted to present nearly all
+            information above the fold. This was likely driven by older
+            marketing assumptions that users would not scroll, leading to a
+            dense, visually heavy layout.
+          </p>
+          <p>
+            While it was impressive how much content had been packed into one
+            screen, this approach introduced several issues:
+          </p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>
+              The interface felt
+              <strong>cluttered and visually overwhelming</strong>
+            </li>
+            <li>
+              Users struggled to identify the
+              <strong>primary call to action</strong>
+            </li>
+            <li>
+              The service offering was <strong>unclear at first glance</strong>
+            </li>
+            <li>
+              Trust elements were present but
+              <strong>not used strategically</strong>
+            </li>
+            <li>
+              New visitors found it difficult to understand
+              <strong>how to book or what to expect</strong>
+            </li>
+          </ul>
+          <p>
+            Analytics, enquiry data, and customer feedback revealed that users
+            needed a more structured and calming introduction something that
+            built trust gradually instead of presenting everything at once.
+          </p>
+        </div>
+        <div class="flex flex-col justify-center md:flex-row gap-6">
+          <img
+            src="/img/new_clip1.PNG"
+            alt="New homepage"
+            class="w-full ring-2 ring-gray-300 rounded-lg"
+          />
+
+          <img
+            src="/img/old_clip1.PNG"
+            alt="Old homepage"
+            class="w-full ring-2 ring-gray-300 rounded-lg"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 02 -->
+    <section class="max-w-4xl mx-auto px-6 mt-24">
+      <div class="space-y-6 mb-12">
+        <h2 class="text-2xl font-semibold">02. Design Goals</h2>
+
+        <h3 class="text-2xl font-semibold">
+          1. Improve clarity of the service offering
+        </h3>
+        <div class="text-xl">
+          <p>
+            Pet owners should immediately understand who the business is, what
+            services are provided, and how these services address real needs
+            such as pet comfort, convenience, home safety, and affordability.
+          </p>
+
+          <h3 class="text-xl font-semibold">2. Establish trust upfront</h3>
+          <p>
+            Certifications, years of experience, number of completed visits, and
+            strong testimonials needed more strategic placement to support
+            credibility.
+          </p>
+
+          <h3 class="text-xl font-semibold">
+            3. Increase conversions through a clearer booking flow
+          </h3>
+          <p>
+            The “Book or Query” button required greater visibility, improved
+            positioning, and a more supportive explanation of what users can
+            expect after clicking.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 03 -->
+    <section class="max-w-4xl mx-auto px-6 mt-24">
+      <div class="space-y-6 mb-12">
+        <h2 class="text-2xl font-semibold">03. The Approach</h2>
+        <p class="text-xl">
+          Because a backend rebuild was not in scope, improvements were achieved
+          through thoughtful restructuring, UI enhancements, and visual updates
+          on the front end.
+        </p>
+
+        <h3 class="text-xl font-semibold">Restructuring the narrative</h3>
+        <p class="text-xl">
+          Instead of overwhelming visitors with everything at once, the new
+          design guides users along a logical path:
+          <strong
+            >Hero → Services → Benefits → Trust → Testimonials → Additional
+            Offerings → Booking</strong
+          >.
+        </p>
+
+        <h3 class="text-xl font-semibold">Clarifying the service offering</h3>
+        <p class="text-xl">
+          Service categories were reorganised into clear, scannable cards for
+          daily visits, live-in care, home-care services, and specialised pet
+          care. This helps users quickly identify what fits their needs.
+        </p>
+        <div>
+          <img
+            src="/img/project1Services.png"
+            alt="petsitter services images"
+            class="ring-1 ring-gray-300"
+          />
+        </div>
+
+        <h3 class="text-xl font-semibold">Building trust earlier</h3>
+        <p class="text-xl">
+          Certification badges, experience metrics, and genuine testimonials
+          were elevated higher on the page to better support first-time
+          visitors.
+        </p>
+
+        <h3 class="text-xl font-semibold">Strengthening the CTA</h3>
+        <img
+          src="/img/booknow_clip.PNG"
+          alt="book now button clip"
+          class="w-full ring-1 ring-gray-100 rounded-md shadow"
+        />
+        <p class="text-xl">
+          The primary call-to-action,<strong>“Book or Query Here,”</strong> was
+          made more prominent and repeated throughout the page to support
+          decision-making at every step.
+        </p>
+        <img
+          src="/img/bokknow_clip2.PNG"
+          alt="book now button clip 2"
+          class=""
+        />
+      </div>
+      <div>
+        <h2 class="text-xl font-semibold">
+          Clearly communicate the company's core services
+        </h2>
+        <div class="text-xl space-y-4">
+          <p>
+            Since the business revolves around pet care, the content needed to
+            feel warm, reliable, and highly organized, reassuring pet owners
+            that their pets would be in safe hands.
+          </p>
+          <p>
+            I structured this section into four key service cards: Professional
+            Pet Care, Complete Home Care, Flexible Service Options, and
+            Specialised Services.
+          </p>
+          <p>
+            The layout uses a balanced grid system supported by large, emotive
+            pet images on top of each card. This creates immediate visual trust
+            and helps users connect emotionally.
+          </p>
+          <p>Typography is used to establish clear hierarchy:</p>
+        </div>
+        <ul class="text-xl list-disc list-inside space-y-1">
+          <li>Service titles are bold and prominent.</li>
+          <li>Descriptions are concise and easy to skim.</li>
+          <li>
+            Important notes (such as
+            <strong><i>“FREE interviews”</i></strong> and
+            <strong><i>“We do not require food/beverages”</i></strong> ) are
+            highlighted in color for quick scanning.
+          </li>
+        </ul>
+        <p class="text-xl">
+          A strong and visible <strong>“Book Now”</strong> button is placed
+          centrally to encourage conversions, followed by a confidence-building
+          reassurance statement:
+          <strong><i>“Satisfaction guaranteed or your money back.”</i></strong>
+        </p>
+        <div class="my-10">
+          <img src="/img/project1service2.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 04 -->
+    <section class="max-w-4xl mx-auto px-6 mt-24">
+      <div class="space-y-6 mb-12">
+        <h2 class="text-2xl font-semibold">04. The Outcome</h2>
+        <div class="text-xl">
+          <p>
+            The redesigned website delivers a cleaner, more trustworthy, and
+            more engaging experience for both new and returning pet owners.
+          </p>
+
+          <ul class="list-disc pl-6 space-y-2">
+            <li>A clear, easy-to-understand service offering</li>
+            <li>A calmer, more modern visual identity</li>
+            <li>Trust indicators surfaced earlier in the user journey</li>
+            <li>
+              Reduced cognitive load through simplified structure and content
+            </li>
+            <li>More compelling and visible CTAs</li>
+            <li>
+              Better visibility for additional offerings like insurance and
+              books
+            </li>
+          </ul>
+
+          <p>
+            Overall, the site now reflects the professionalism and warmth that
+            define Pet Sitters Cape Town’s brand.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 05 -->
+    <section class="max-w-4xl mx-auto px-6 mt-24">
+      <div class="space-y-6">
+        <h2 class="text-2xl font-semibold">05. Reflection</h2>
+        <p class="text-xl">
+          This project shows how a thoughtfully redesigned front end can
+          significantly improve user experience without altering backend
+          systems. By reorganising information, highlighting trust elements, and
+          guiding visitors through a clear narrative, the website now functions
+          as a far more effective digital touchpoint helping both users and the
+          business achieve better outcomes.
+        </p>
+      </div>
+    </section>
+    <!-- Ending -->
+    <section class="max-w-4xl mx-auto px-6 mt-24">
+      <div>
+        <h2 class="text-2xl font-semibold">Launch time</h2>
+        <p class="text-xl">
+          The new design was put to the test against the original via an A/B
+          experiment, and the results exceeded our expectations, showing
+          superior performance in critical areas. Working within the tight
+          technical scope presented a fun and valuable challenge. This project
+          serves as a compelling case study on how even strictly visual
+          modifications can dramatically improve the user experience and
+          significantly boost a homepage's conversion rate.
+        </p>
+      </div>
+    </section>
+      <!-- Footer Section -->
+      <footer class="mt-20 mb-7">
+        <div
+          class="text-center grid grid-cols-2 md:space-x-10 gap-y-3 md:block text-2xl font-medium"
+        >
+          <a href="#about" class="hover:text-orange-400 duration-200">About</a>
+          <a href="#experience" class="hover:text-orange-400 duration-200"
+            >Experience</a
+          >
+          <a href="#projects" class="hover:text-orange-400 duration-200">Projects</a>
+          <a href="#" class="hover:text-orange-400 duration-200">Blogs</a>
+        </div>
+        <div class="text-center my-7 py-10 text-4xl md:text-5xl">
+          <a href=""><i class="fa-brands fa-github"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <p
+          class="font-semibold text-textColorLight text-center mt-10 px-3 md:mt-14"
+        >
+          Copyright &copy 2025 Shazid. All rights reserved.
+        </p>
+      </footer>
+
+    <script src="../app.js"></script>
+  </body>
+</html>

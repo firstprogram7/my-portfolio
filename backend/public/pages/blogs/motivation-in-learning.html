@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/output.css" />
+    <title>Motivation in learning new technology</title>
+  </head>
+  <body>
+      <!-- Dark theme toggle -->
+      <section>
+        <div class="flex justify-end px-4 pt-3">
+          <div
+            class="switch px-3 py-1 rounded-full space-x-2 max-w-20 bg-stone-100 hover:bg-stone-200 dark:bg-stone-700 dark:border-transparent border border-stone-300 shadow-sm duration-300"
+          >
+            <i class="fa-regular fa-sun dark:text-stone-500 cursor-pointer"></i
+            ><i class="fa-solid fa-moon text-stone-300 cursor-pointer"></i>
+          </div>
+        </div>
+      </section>
+      <!-- Navbar -->
+      <header class="relative z-50">
+        <nav class="container mx-auto">
+          <div class="flex justify-between items-center px-4 py-4">
+      
+            <!-- Logo -->
+            <a href="/" class="text-4xl font-bold md:text-5xl">Shazid</a>
+      
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-6">
+              <a href="#about" class="hover:text-orange-400 md:text-xl lg:text-2xl">About</a>
+              <a href="#experience" class="hover:text-orange-400 md:text-xl lg:text-2xl">Experience</a>
+              <a href="#projects" class="hover:text-orange-400 md:text-xl lg:text-2xl">Projects</a>
+              <a href="/blogs" class="hover:text-orange-400 md:text-xl lg:text-2xl">Blog</a>
+              <a href="/contact" class="hover:text-orange-400 md:text-xl lg:text-2xl">Contact Me</a>
+            </div>
+      
+            <!-- Hamburger Button -->
+            <button id="hamburger" class="md:hidden flex flex-col gap-1.5">
+              <span class="h-1 w-8 bg-textColorDark dark:bg-textOffWhite block transition-all"></span>
+              <span class="h-1 w-8 bg-textColorDark dark:bg-textOffWhite block transition-all"></span>
+              <span class="h-1 w-8 bg-textColorDark dark:bg-textOffWhite block transition-all"></span>
+            </button>
+          </div>
+      
+          <!-- MOBILE MENU (ABSOLUTE) -->
+          <div
+            id="mobileMenu"
+            class="absolute left-0 top-full w-full bg-textOffWhite dark:bg-darkBackground  shadow-lg py-10 px-6 space-y-6 text-lg text-center font-bold transform scale-y-0 origin-top transition-all duration-300 md:hidden"
+          >
+            <a href="#about" class="block hover:text-orange-400">About</a>
+            <a href="#experience" class="block hover:text-orange-400">Experience</a>
+            <a href="#projects" class="block hover:text-orange-400">Projects</a>
+            <a href="/blogs" class="block hover:text-orange-400">Blog</a>
+            <a href="/contact" class="block hover:text-orange-400">Contact Me</a>
+          </div>
+        </nav>
+      </header>
+    <main class="max-w-6xl mx-auto">
+      <!-- Hero section -->
+      <section class="p-20">
+        <div class="space-y-4">
+          <h2 class="text-3xl font-semibold md:text-5xl">
+            How I Stay Motivated Learning New Technologies and Applying Them
+            Effectively Daily
+          </h2>
+          <p class="text-xl font-semibold text-textColorLight md:text-2xl">
+            Sustained Growth: Building a Habit of Continuous Learning and
+            Effective Output
+          </p>
+          <div
+            class="flex flex-col justify-between space-y-1 max-w-96 md:flex-row md:items-center"
+          >
+            <img
+              src="/img/profile_pic.jpeg"
+              alt="Blogger Image"
+              class="w-12 rounded-full"
+            />
+            <p class="font-medium text-xl text-textColorLight">15 min read</p>
+            <p class="font-medium text-xl text-textColorLight">June 6, 2025</p>
+          </div>
+        </div>
+      </section>
+      <!-- Key take away section-->
+      <section class="mt-10">
+        <div
+          class="max-w-5xl bg-gray-300 p-20 mx-3 space-y-4 rounded-3xl md:mx-auto"
+        >
+          <h2 class="text-3xl font-semibold">Key takeaways</h2>
+          <ul
+            class="list-disc list-inside space-y-2 text-xl font-medium text-textColorLight"
+          >
+            <li>
+              <strong>Start Small, Build Momentum:</strong> Break learning into
+              20-30 minute daily sessions rather than marathon study periods to
+              maintain consistency and prevent burnout.
+            </li>
+            <li>
+              <strong>Learn by Building Real Projects:</strong> Apply new
+              technologies to solve actual problems you face, making learning
+              more engaging and memorable than passive tutorials.
+            </li>
+            <li>
+              <strong>Create a Personal Knowledge System:</strong> Document your
+              learning journey through blogs, notes, or code repositories to
+              reinforce understanding and build a valuable reference library.
+            </li>
+            <li>
+              <strong>Join Communities and Share Progress:</strong> Connect with
+              other learners and practitioners to stay accountable, gain fresh
+              perspectives, and maintain enthusiasm.
+            </li>
+            <li>
+              <strong>Embrace the "Good Enough" Philosophy:</strong> Focus on
+              practical application over perfection, understanding that mastery
+              comes through repeated use rather than exhaustive study.
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Blog Intro -->
+      <section class="p-20">
+        <div class="text-xl font-medium space-y-10">
+          <p>
+            In the rapidly evolving world of technology, staying current can
+            feel like trying to drink from a fire hose. New frameworks,
+            languages, tools, and paradigms emerge constantly, each promising to
+            revolutionize how we work. Yet, after years of navigating this
+            landscape, I've discovered that the secret to continuous learning
+            isn't about consuming everything it's about cultivating sustainable
+            habits that make learning feel less like a chore and more like an
+            adventure.
+          </p>
+
+          <h2><strong>The Mindset Shift That Changed Everything</strong></h2>
+
+          <p>
+            Early in my career, I approached learning new technologies with a
+            perfectionist mindset. I believed I needed to master every detail
+            before building anything real. This approach led to tutorial
+            hell endless courses and documentation reading without tangible
+            results. The breakthrough came when I realized that
+            <strong
+              >learning is not a destination but a continuous journey</strong
+            >.
+          </p>
+
+          <p>
+            I shifted from asking "How can I master this completely?" to "What
+            can I build with what I know right now?" This single question
+            transformed my relationship with learning. Instead of feeling
+            overwhelmed by everything I didn't know, I became excited about the
+            possibilities within reach.
+          </p>
+
+          <h2><strong>My Daily Learning Framework</strong></h2>
+
+          <p>
+            Consistency beats intensity every time. Rather than dedicating
+            entire weekends to learning binges, I've structured my days to
+            include small, focused learning sessions that compound over time.
+          </p>
+
+          <h2><strong>Morning Micro-Learning Sessions</strong></h2>
+
+          <p>
+            I dedicate 20-30 minutes each morning to focused learning before the
+            day's distractions begin. This isn't passive consumption I actively
+            code along, take notes, or experiment with concepts. The key is that
+            it happens before my brain gets cluttered with meetings and
+            deadlines.
+          </p>
+
+          <p>
+            During this time, I might explore a new library feature, read
+            through well-written code from open-source projects, or work through
+            a specific problem I encountered the previous day. The morning
+            timing ensures that when I encounter similar challenges later, the
+            concepts are fresh and ready to apply.
+          </p>
+
+          <h2><strong>The "Learn by Shipping" Approach</strong></h2>
+
+          <p>
+            Theory without practice is like learning to swim by reading books.
+            The real magic happens when you apply new technologies to solve
+            actual problems. Here's how I make this practical:
+          </p>
+
+          <ul class="list-disc list-inside">
+            <li>
+              <strong>Identify Real Problems:</strong> I keep a running list of
+              frustrations in my workflow repetitive tasks, clunky processes, or
+              gaps in my toolset. Each represents an opportunity to apply
+              something new.
+            </li>
+            <li>
+              <strong>Start Ridiculously Small:</strong> My first project with
+              any new technology is intentionally tiny. When learning React, I
+              didn't build a social media platform; I built a simple to-do list.
+              This small win builds confidence and understanding.
+            </li>
+            <li>
+              <strong>Iterate and Expand:</strong> Once the basics work, I
+              gradually add complexity. That to-do list becomes a project
+              tracker, then gains collaboration features, then integrates with
+              APIs. Each iteration deepens my understanding.
+            </li>
+            <li>
+              <strong>Ship It Publicly:</strong> Even if imperfect, I deploy my
+              learning projects. There's something powerful about having a live
+              URL or published package. It transforms learning from theoretical
+              to tangible.
+            </li>
+          </ul>
+
+          <h2><strong>Building a Personal Knowledge System</strong></h2>
+
+          <p>
+            One of my most valuable habits is treating my learning as a growing
+            knowledge base rather than isolated episodes. I maintain what I call
+            my "Second Brain" for technical knowledge.
+          </p>
+
+          <p>
+            After learning something new, I write about it. Not elaborate blog
+            posts necessarily, but clear explanations in my own words. This
+            serves multiple purposes: it forces me to truly understand concepts,
+            creates searchable references for future me, and often helps others
+            who stumble upon my notes.
+          </p>
+
+          <p>
+            I organize my notes by technology, concept, and problem solved. When
+            I encounter a similar challenge months later, I have my own
+            documentation written in language that resonates with how I think.
+            This compounds over time five years of notes becomes an invaluable
+            personal reference library.
+          </p>
+
+          <h2><strong>The Power of Community and Accountability</strong></h2>
+
+          <p>
+            Learning in isolation is harder than learning together. I've found
+            that connecting with communities around the technologies I'm
+            learning creates natural motivation and accelerates growth.
+          </p>
+
+          <ul class="list-disc list-inside">
+            <li>
+              <strong>Join Specific Communities:</strong> Rather than lurking in
+              massive general forums, I participate in focused communities
+              around specific technologies. The Vue.js Discord, Rust subreddit,
+              or local Python meetups provide targeted help and inspiration.
+            </li>
+            <li>
+              <strong>Share Your Journey:</strong> I regularly post about what
+              I'm learning on social media or dev platforms. The
+              responses questions, suggestions, or encouragement create a
+              feedback loop that keeps me engaged.
+            </li>
+            <li>
+              <strong>Find an Accountability Partner:</strong> Learning
+              alongside someone else, even asynchronously, provides motivation.
+              We share progress, discuss concepts, and celebrate wins together.
+            </li>
+            <li>
+              <strong>Teach What You Learn:</strong> Explaining concepts to
+              others is the ultimate test of understanding. I look for
+              opportunities to mentor, write tutorials, or answer questions in
+              communities. Teaching reveals gaps in my knowledge and solidifies
+              what I do understand.
+            </li>
+          </ul>
+
+          <h2><strong>Maintaining Momentum Through Strategic Choices</strong></h2>
+
+          <p>
+            Not every shiny new technology deserves your attention. Part of
+            staying motivated is being strategic about what you learn and when.
+          </p>
+
+          <h2><strong>The "Adjacent Possible" Strategy</strong></h2>
+
+          <p>
+            I focus on learning technologies that are one step beyond my current
+            capabilities the "adjacent possible." If I'm comfortable with
+            JavaScript, learning TypeScript makes sense. Jumping straight to
+            Haskell might be too far afield and demotivating.
+          </p>
+
+          <p>
+            This doesn't mean avoiding challenges, but rather building a
+            learning path where each step feels achievable yet stretching.
+            Success breeds motivation, and carefully chosen challenges create a
+            virtuous cycle.
+          </p>
+
+          <h2><strong>Following Curiosity Over Trends</strong></h2>
+
+          <p>
+            While staying aware of industry trends matters, I've learned to
+            prioritize genuine curiosity. If a technology genuinely fascinates
+            me, I'll stay motivated through inevitable frustrations. If I'm
+            learning something solely because it's popular, my motivation
+            evaporates when challenges arise.
+          </p>
+
+          <p>
+            I ask myself: "Does this solve a problem I care about?" or "Does
+            this approach intrigue me intellectually?" If the answer is no, I
+            might note it for later but focus elsewhere.
+          </p>
+
+          <h2>Celebrating Small Wins</h2>
+
+          <p>
+            Learning new technologies involves countless small victories that
+            are easy to overlook in pursuit of mastery. I've made it a practice
+            to consciously acknowledge progress.
+          </p>
+
+          <p>
+            When a code snippet finally works, when a concept clicks, when I
+            solve a problem independently I pause and acknowledge these moments.
+            This might sound trivial, but recognizing progress fuels continued
+            effort. I keep a "wins journal" where I note these moments, creating
+            a tangible record of growth.
+          </p>
+
+          <h2><strong>Dealing with Plateaus and Frustration</strong></h2>
+
+          <p>
+            Motivation naturally ebbs and flows. I've learned that expecting
+            constant enthusiasm is unrealistic. Instead, I've developed
+            strategies for maintaining forward movement even when motivation
+            dips.
+          </p>
+
+          <ul class="list-disc list-inside">
+            <li>
+              <strong>Switch Contexts:</strong> When stuck or frustrated with
+              one technology, I temporarily shift to another. This prevents
+              burnout while maintaining learning momentum.
+            </li>
+            <li>
+              <strong>Lower the Bar:</strong> On low-motivation days, I reduce
+              expectations. Instead of building features, I might just read
+              documentation or watch a quick tutorial. Some progress beats no
+              progress.
+            </li>
+            <li>
+              <strong>Revisit Why:</strong> I periodically reflect on why I
+              wanted to learn this technology. Reconnecting with initial
+              motivation often reignites enthusiasm.
+            </li>
+            <li>
+              <strong>Take Strategic Breaks:</strong> Sometimes the best thing
+              for learning is stepping away. A few days off often provides
+              perspective and renewed energy.
+            </li>
+          </ul>
+
+          <h2><strong>Integrating Learning into Daily Work</strong></h2>
+
+          <p>
+            The most sustainable learning happens when it's integrated into
+            daily work rather than treated as separate. I look for opportunities
+            to introduce new technologies into my regular projects, even in
+            small ways.
+          </p>
+
+          <p>
+            This might mean refactoring a component using a new pattern, writing
+            tests with a framework I'm learning, or using a new tool for a
+            specific task. These real-world applications provide context and
+            urgency that artificial projects lack.
+          </p>
+
+          <p>
+            I also dedicate time for "learning experiments" within work
+            projects allocated time to try new approaches without the pressure
+            of immediate delivery. Many of my best learning experiences have
+            come from these sanctioned explorations.
+          </p>
+
+          <h2><strong>The Compounding Effect of Consistency</strong></h2>
+
+          <p>
+            Looking back over years of consistent learning, the compounding
+            effect is remarkable. Technologies that once seemed impossibly
+            complex now feel intuitive. The learning itself becomes easier as
+            you develop meta-skills the ability to read documentation
+            efficiently, debug systematically, and recognize patterns across
+            technologies.
+          </p>
+
+          <p>
+            The key is treating learning as a daily practice rather than an
+            occasional intensive effort. Twenty minutes daily for a year yields
+            over 120 hours of focused learning time enough to gain real
+            proficiency in multiple technologies.
+          </p>
+
+          <div class="summary space-y-10">
+            <h2 class="text-3xl font-semibold">Conclusion</h2>
+            <p>
+              Staying motivated while learning new technologies daily isn't
+              about superhuman discipline or endless free time. It's about
+              creating sustainable systems that make learning feel natural and
+              rewarding. By starting small, building real projects, documenting
+              your journey, engaging with communities, and celebrating progress,
+              you create a positive feedback loop that sustains long-term
+              growth.
+            </p>
+
+            <p>
+              The most important insight is this: learning is not separate from
+              doing. The most effective learning happens when you immediately
+              apply new knowledge to solve real problems, however small. This
+              approach transforms learning from an abstract obligation into an
+              exciting exploration where each new technology becomes a tool for
+              creating something meaningful.
+            </p>
+
+            <p>
+              Remember that everyone's learning journey is unique. The
+              strategies that work for me might need adaptation for your
+              context, but the underlying principles remain: consistency over
+              intensity, application over theory, and curiosity over obligation.
+              With these foundations, staying motivated becomes less about
+              forcing yourself to learn and more about channeling your natural
+              curiosity into continuous growth.
+            </p>
+
+            <p>
+              The technology landscape will continue evolving rapidly, but with
+              the right approach, you'll not just keep up you'll thrive on the
+              challenge of continuous learning, finding joy in the journey
+              rather than stress in the destination.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+       <!-- Blog suggestions -->
+   <section class="space-y-1  md:space-y-6">
+    <h2 class="text-4xl text-center font-bold md:text-5xl">Related Blogs</h2>
+    <div
+    class="flex flex-col py-10 max-w-6xl mx-5  gap-5 md:gap-2 md:py-3 lg:mx-auto lg:flex-row items-stretch"
+  >
+    <!-- Card#1 -->
+    <a href="/blogs/mordern-websites" class="flex-1">
+      <div
+        class="flex flex-col-reverse bg-white dark:bg-stone-700 gap-2 shadow rounded-3xl h-full min-h-[260px] md:flex-row md:gap-6"
+      >
+        <!-- Text -->
+        <div class="space-y-6 px-3 py-4 flex-1">
+          <p
+            class="text-xs font-bold text-blue-700 bg-blue-200 w-40 text-center px-1 rounded-full"
+          >
+            MORDERN WEB APPS
+          </p>
+          <h2 class="text-xl font-semibold">
+  Why Every Small Business Needs a Clean, Modern Website
+          </h2>
+          <div
+            class="font-semibold dark:text-stone-400 text-textColorLight"
+          >
+                <p>15 min</p>
+                <p>September 14, 2025</p>
+          </div>
+        </div>
+
+        <!-- Image -->
+        <div class="w-36 p-3 flex-shrink-0">
+          <img src="../img/cleanWebsite.jpg"  alt="" class="w-full rounded-3xl" />
+        </div>
+      </div>
+    </a>
+    <!-- Card#2-->
+    <a href="/blogs/ai-powered-websites" class="flex-1">
+      <div
+        class="flex flex-col-reverse bg-white dark:bg-stone-700 gap-2 shadow rounded-3xl h-full min-h-[260px] md:flex-row md:gap-6"
+      >
+        <!-- Text -->
+        <div class="space-y-6 px-3 py-4 flex-1">
+          <p
+            class="text-xs font-bold text-blue-700 bg-blue-200 w-40 text-center px-1 rounded-full"
+          >
+            AI POWERED WEBSITES
+          </p>
+          <h2 class="text-xl font-semibold">
+                How AI-Powered Websites Are Helping Small Businesses Get More
+                Leads Without Hiring Extra Staff
+          </h2>
+          <div
+            class="font-semibold text-textColorLight dark:text-stone-400"
+          >
+                <p>16 min</p>
+                <p>November 17, 2025</p>
+          </div>
+        </div>
+
+        <!-- Image -->
+        <div class="w-36 p-3 flex-shrink-0">
+          <img
+            src="../img/aiPowered.jpg"
+            alt=""
+            class="w-full rounded-3xl"
+          />
+        </div>
+      </div>
+    </a>
+    <!-- Card#3 -->
+    <a href="/blogs/my-react-learning-journey" class="flex-1">
+      <div
+        class="flex flex-col-reverse bg-white dark:bg-stone-700 gap-2 shadow rounded-3xl h-full min-h-[260px] md:flex-row md:gap-6"
+      >
+        <!-- Text -->
+        <div class="space-y-6 px-3 py-4 flex-1">
+          <p
+            class="text-xs font-bold text-blue-700 bg-blue-200 w-40 text-center rounded-full"
+          >
+            LEARNED REACT
+          </p>
+          <h2 class="text-xl font-semibold">
+            How I Finally Learned React After Initially Struggling Through
+            Many Confusing Concepts
+          </h2>
+          <div
+            class="font-semibold text-textColorLight dark:text-stone-400"
+          >
+            <p>12 min read</p>
+            <p>August 13, 2025</p>
+          </div>
+        </div>
+
+        <!-- Image -->
+        <div class="w-36 p-3 flex-shrink-0">
+          <img
+            src="../img/learnReact1.jpg"
+            alt=""
+            class="w-full rounded-3xl"
+          />
+        </div>
+      </div>
+    </a>
+  </div>
+  </section>
+     <!-- Footer Section -->
+     <footer class=" mb-7 mt-16 mb:mt-20">
+      <div
+        class="text-center grid grid-cols-2 md:space-x-10 gap-y-3 md:block text-2xl font-medium"
+      >
+        <a href="#about" class="hover:text-orange-400 duration-200">About</a>
+        <a href="#experience" class="hover:text-orange-400 duration-200"
+          >Experience</a
+        >
+        <a href="#projects" class="hover:text-orange-400 duration-200"
+          >Projects</a
+        >
+        <a href="http://localhost:3000/blogs" class="hover:text-orange-400 duration-200">Blogs</a>
+      </div>
+      <div class="text-center my-7 py-10 text-4xl md:text-5xl">
+        <a href=""><i class="fa-brands fa-github"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+      <p
+        class="font-semibold text-textColorLight text-center mt-10 px-3 md:mt-14"
+      >
+        Copyright &copy 2025 Shazid. All rights reserved.
+      </p>
+    </footer>
+    <script src="/app.js"></script>
+  </body>
+</html>

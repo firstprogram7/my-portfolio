@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="https://cdn.tailwindcss.com/3.4.17"></script> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="/output.css" rel="stylesheet" />
+    <title>My Portfolio_new</title>
+  </head>
+  <body>
+    <!-- Dark theme toggle -->
+    <section>
+      <div class="flex justify-end px-4 pt-3">
+        <div
+          class="switch px-3 py-1 rounded-full space-x-2 max-w-20 bg-stone-100 hover:bg-stone-200 dark:bg-stone-700 dark:border-transparent border border-stone-300 shadow-sm duration-300"
+        >
+          <i class="fa-regular fa-sun dark:text-stone-500 cursor-pointer"></i
+          ><i class="fa-solid fa-moon text-stone-300 cursor-pointer"></i>
+        </div>
+      </div>
+    </section>
+    <!-- Navbar -->
+    <header class="relative z-50">
+      <nav class="container mx-auto">
+        <div class="flex justify-between items-center px-4 py-4">
+    
+          <!-- Logo -->
+          <a href="/" class="text-4xl font-bold md:text-5xl">Shazid</a>
+    
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex space-x-6">
+            <a href="#about" class="hover:text-orange-400 md:text-xl lg:text-2xl">About</a>
+            <a href="#experience" class="hover:text-orange-400 md:text-xl lg:text-2xl">Experience</a>
+            <a href="#projects" class="hover:text-orange-400 md:text-xl lg:text-2xl">Projects</a>
+            <a href="/blogs" class="hover:text-orange-400 md:text-xl lg:text-2xl">Blog</a>
+            <a href="/contact" class="hover:text-orange-400 md:text-xl lg:text-2xl">Contact Me</a>
+          </div>
+    
+          <!-- Hamburger Button -->
+          <button id="hamburger" class="md:hidden flex flex-col gap-1.5">
+            <span class="h-1 w-8 bg-textColorDark dark:bg-textOffWhite block transition-all"></span>
+            <span class="h-1 w-8 bg-textColorDark dark:bg-textOffWhite block transition-all"></span>
+            <span class="h-1 w-8 bg-textColorDark dark:bg-textOffWhite block transition-all"></span>
+          </button>
+        </div>
+    
+        <!-- MOBILE MENU (ABSOLUTE) -->
+        <div
+          id="mobileMenu"
+          class="absolute left-0 top-full w-full bg-textOffWhite dark:bg-darkBackground  shadow-lg py-10 px-6 space-y-6 text-lg text-center font-bold transform scale-y-0 origin-top transition-all duration-300 md:hidden"
+        >
+          <a href="#about" class="block hover:text-orange-400">About</a>
+          <a href="#experience" class="block hover:text-orange-400">Experience</a>
+          <a href="#projects" class="block hover:text-orange-400">Projects</a>
+          <a href="/blogs" class="block hover:text-orange-400">Blog</a>
+          <a href="/contact" class="block hover:text-orange-400">Contact Me</a>
+        </div>
+      </nav>
+    </header>
+    
+    
+    
+    <!-- Hero section -->
+    <section class="mt-16 md:mt-24">
+      <div
+        class="flex flex-col justify-center items-center gap-10 max-w-5xl mx-auto md:flex-row"
+      >
+        <div class="max-w-[320px] px-3 md:px-6">
+          <img
+            src="../img/profile_pic.jpeg"
+            alt="Profile picture"
+            class="w-full rounded-full"
+          />
+        </div>
+        <div class="text-center space-y-3 px-5">
+          <p class="text-3xl md:text-4xl">Hello! I'm</p>
+          <h1 class="text-4xl font-bold my-2 md:text-5xl">Shazid Rahman</h1>
+          <h3 class="text-3xl md:text-4xl">Web Developer</h3>
+          <div class="flex justify-center flex-col gap-5 md:flex-row">
+            <a
+              href=""
+              class="ring-1 ring-orange-300 hover:bg-stone-700 hover:text-textOffWhite font-semibold px-4 py-2 rounded-full"
+              >Download CV</a
+            >
+            <a
+              href=""
+              class="ring-1 ring-orange-300 bg-stone-700 text-textOffWhite hover:text-textOffWhite font-semibold px-4 py-2 rounded-full"
+              >Contact Info</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About me -->
+    <section id="about" class="mt-16 container mx-auto md:mt-28">
+      <!-- Section Heading -->
+      <div class="text-center">
+        <p class="text-xl text-textColorLight">Get To Know More</p>
+        <h2 class="text-4xl font-semibold md:text-5xl">About Me</h2>
+      </div>
+      <div
+        class="flex flex-col md:flex-row gap-10 justify-center items-center my-14 md:items-stretch"
+      >
+        <div
+          class="w-full flex-1 ring-1 ring-orange-300 duration-300 text-center py-10 px-5 rounded-xl max-w-80"
+        >
+          <h2 class="text-3xl font-bold md:text-4xl">Experience</h2>
+          <p class="text-xl mt-4 font-semibold md:text-2xl">4+ Years</p>
+          <p class="text-xl font-semibold md:text-2xl">Web Development</p>
+        </div>
+        <div
+          class="flex-1 ring-1 ring-orange-300 duration-300 text-center py-10 px-12 md:px-5 rounded-xl max-w-80"
+        >
+          <h2 class="text-2xl font-bold md:text-4xl">Education</h2>
+          <p class="text-xl mt-4 font-semibold md:text-2xl">
+            Bachelors Of Engineering
+          </p>
+        </div>
+      </div>
+      <!-- About me desc -->
+      <div class="max-w-4xl mx-auto text-xl font-medium px-10 space-y-5">
+        <p class="">
+          I'm a front-end web developer with 4+ years of experience creating
+          visually engaging and highly responsive user interfaces. With a
+          Bachelor's degree in Engineering, I have a strong foundation in HTML,
+          CSS, JavaScript, and modern frameworks like React and Vue.js.
+        </p>
+        <p>
+          I specialize in crafting pixel-perfect designs, optimizing
+          performance, and enhancing user experiences through interactive and
+          accessible web solutions. Passionate about clean code and UI/UX best
+          practices, I bring ideas to life with creativity and precision.
+        </p>
+        <p>
+          For the past 4 years as a freelance designer, I've worked remotely
+          with agencies, advised startups, and teamed up with talented
+          professionals to craft digital products for businesses and consumers
+          alike. I'm confident yet humble, naturally curious, and always
+          striving to refine my skills.
+        </p>
+      </div>
+    </section>
+    <!-- Experience section-->
+    <section id="experience" class="space-y-16 mt-16 md:mt-20">
+      <div class="text-center">
+        <p class="text-xl text-textColorLight">Explore My</p>
+        <h2 class="text-4xl font-semibold md:text-5xl">Experiences</h2>
+      </div>
+      <div class="flex flex-col justify-center items-center gap-8 lg:flex-row">
+        <div
+          class="max-w-xs flex-1 ring-1 dark:ring-4 ring-orange-300 duration-300 rounded-lg md:max-w-lg"
+        >
+          <img
+            src="/img/frontend.jpeg"
+            alt="Frontend image"
+            class="w-full rounded-lg shadow-md dark:brightness-75"
+          />
+        </div>
+        <div
+          class="max-w-xs flex-1 ring-1 dark:ring-4 ring-orange-300 duration-300 rounded-lg md:max-w-lg"
+        >
+          <img
+            src="/img/backend.jpeg"
+            alt="Backend image"
+            class="w-full rounded-lg shadow-md dark:brightness-75"
+          />
+        </div>
+      </div>
+    </section>
+    <!--Add project section here-->
+    <section id="projects" class="space-y-16 mt-16 md:mt-24">
+      <div class="text-center">
+        <p class="text-xl text-textColorLight">Projects</p>
+        <h2 class="text-4xl font-semibold md:text-5xl">My Latest Projects</h2>
+      </div>
+
+      <!-- Parent: use items-stretch so children (cards) get equal height -->
+      <div
+        class="flex flex-col md:flex-row justify-between items-stretch gap-5 px-6 xl:max-w-6xl xl:mx-auto"
+      >
+        <!-- Card 1 -->
+        <div
+          class="flex flex-col flex-1 h-full bg-stone-100 space-y-6 p-2 rounded-lg shadow-lg ring-1 ring-stone-300 hover:-translate-y-1 duration-300 hover:cursor-pointer"
+        >
+          <img
+            src="/img/petsitter.jpg"
+            alt="petsitter website image"
+            class="w-full h-48 md:h-56 object-cover rounded-lg"
+          />
+          <div class="flex-1 flex flex-col justify-between">
+            <div>
+              <h2 class="text-2xl font-semibold dark:text-textColorDark">
+                Pet Sitters Website
+              </h2>
+              <p class="text-sm font-medium text-gray-500 pt-1">
+                Trusted Pet Sitting Services You Can Trust
+              </p>
+              <p class="text-base text-center font-semibold bg-green-600 w-24 text-white mt-2 rounded-md">
+                ● Live
+              </p>
+            </div>
+            <a
+              href="/projects/pet-sitter-website"
+              class="text-xl text-green-500 hover:text-blue-600 duration:300 max-w-36 font-semibold mt-4"
+              >Case Study <i class="fa-solid fa-arrow-right-long"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="flex flex-col flex-1 h-full bg-stone-100 space-y-6 p-2 rounded-lg shadow-lg ring-1 ring-stone-300 hover:-translate-y-1 duration-300 hover:cursor-pointer"
+        >
+          <img
+            src="/img/ngo.jpg"
+            alt=""
+            class="w-full h-48 md:h-56 object-cover rounded-lg"
+          />
+          <div class="flex-1 flex flex-col justify-between">
+            <div>
+              <h2 class="text-2xl font-semibold dark:text-textColorDark">
+                Fairmed India Project
+              </h2>
+              <p class="text-sm font-medium text-gray-500 pt-1">
+                Health for the Poorest Through Sustainable Support
+              </p>
+              <p class="text-base text-center font-semibold bg-green-600 w-24 text-white mt-2 rounded-md">
+                ● Live
+              </p>
+            </div>
+            <a
+              href="/projects/fairmed-india-project"
+              class="text-xl text-green-500 hover:text-blue-600 duration:300 max-w-36 font-semibold mt-4"
+              >Case Study <i class="fa-solid fa-arrow-right-long"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="flex flex-col flex-1 h-full bg-stone-100 space-y-6 p-2 rounded-lg shadow-lg ring-1 ring-stone-300 hover:-translate-y-1 duration-300 hover:cursor-pointer"
+        >
+          <img
+            src="/img/eyeclinic.jpg"
+            alt=""
+            class="w-full h-48 md:h-56 object-cover rounded-lg"
+          />
+          <div class="flex-1 flex flex-col justify-between">
+            <div>
+              <h2 class="text-2xl font-semibold dark:text-textColorDark">
+                Lensmaster Eye Clinic
+              </h2>
+              <p class="text-sm font-medium text-gray-500 pt-1">
+                Eye Care & Clinic With Better Professionals
+              </p>
+              <p class="text-base text-center font-semibold bg-yellow-500 w-36 text-textColorDark mt-2 rounded-md">
+                🔄 In Progress
+              </p>
+            </div>
+            <a
+              href="#"
+              class="text-xl text-green-500 hover:text-blue-600 duration:300 max-w-36 font-semibold mt-4"
+              >Case Study <i class="fa-solid fa-arrow-right-long"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact" class=" space-y-12 mt-16 md:space-y-16  md:mt-24">
+      <div class="text-center">
+        <p class="text-xl text-textColorLight">Get In Touch</p>
+        <h2 class="text-4xl font-semibold md:text-5xl">Contact Me</h2>
+      </div>
+      <div>
+        <p
+          class="text-3xl duration-300 font-light text-center px-1 md:text-5xl text-scroll-color"
+        >
+          Let's Build Something Beautiful & Functional
+        </p>
+      </div>
+      <div class="text-center scroll-animation from-bottom">
+        <a
+          href="http://localhost:3000/contact"
+          class="text-2xl hover:text-4xl font-bold px-10 py-2 ring-1 ring-orange-300 hover:ring-4 duration-300 rounded-full shadow-md md:text-3xl"
+          >Say Hi!</a
+        >
+      </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class=" mb-7 mt-16 mb:mt-20">
+      <div
+        class="text-center grid grid-cols-2 md:space-x-10 gap-y-3 md:block text-2xl font-medium"
+      >
+        <a href="#about" class="hover:text-orange-400 duration-200">About</a>
+        <a href="#experience" class="hover:text-orange-400 duration-200"
+          >Experience</a
+        >
+        <a href="#projects" class="hover:text-orange-400 duration-200"
+          >Projects</a
+        >
+        <a href="http://localhost:3000/blogs" class="hover:text-orange-400 duration-200">Blogs</a>
+      </div>
+      <div class="text-center my-7 py-10 text-4xl md:text-5xl">
+        <a href=""><i class="fa-brands fa-github"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+      <p
+        class="font-semibold text-textColorLight text-center mt-10 px-3 md:mt-14"
+      >
+        Copyright &copy 2025 Shazid. All rights reserved.
+      </p>
+    </footer>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

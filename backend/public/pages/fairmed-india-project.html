@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      />
+    <link rel="stylesheet" href="../output.css" />
+    <title>Fairmed India Project</title>
+  </head>
+  <body>
+        <!-- Dark theme toggle -->
+        <section>
+          <div class="flex justify-end px-4 pt-3">
+            <div
+              class="switch px-3 py-1 rounded-full space-x-2 max-w-20 bg-stone-100 hover:bg-stone-200 dark:bg-stone-700 dark:border-transparent border border-stone-300 shadow-sm duration-300"
+            >
+              <i class="fa-regular fa-sun dark:text-stone-500 cursor-pointer"></i
+              ><i class="fa-solid fa-moon text-stone-300 cursor-pointer"></i>
+            </div>
+          </div>
+        </section>
+        <!-- Navbar -->
+        <header class="relative z-50">
+          <nav class="container mx-auto">
+            <div class="flex justify-between items-center px-4 py-4">
+        
+              <!-- Logo -->
+              <a href="/" class="text-4xl font-bold md:text-5xl">Shazid</a>
+        
+              <!-- Desktop Menu -->
+              <div class="hidden md:flex space-x-6">
+                <a href="#about" class="hover:text-orange-400 md:text-xl lg:text-2xl">About</a>
+                <a href="#experience" class="hover:text-orange-400 md:text-xl lg:text-2xl">Experience</a>
+                <a href="#projects" class="hover:text-orange-400 md:text-xl lg:text-2xl">Projects</a>
+                <a href="/blogs" class="hover:text-orange-400 md:text-xl lg:text-2xl">Blog</a>
+                <a href="/contact" class="hover:text-orange-400 md:text-xl lg:text-2xl">Contact Me</a>
+              </div>
+        
+              <!-- Hamburger Button -->
+              <button id="hamburger" class="md:hidden flex flex-col gap-1.5">
+                <span class="h-1 w-8 bg-textColorDark dark:bg-textOffWhite block transition-all"></span>
+                <span class="h-1 w-8 bg-textColorDark dark:bg-textOffWhite block transition-all"></span>
+                <span class="h-1 w-8 bg-textColorDark dark:bg-textOffWhite block transition-all"></span>
+              </button>
+            </div>
+        
+            <!-- MOBILE MENU (ABSOLUTE) -->
+            <div
+              id="mobileMenu"
+              class="absolute left-0 top-full w-full bg-textOffWhite dark:bg-darkBackground  shadow-lg py-10 px-6 space-y-6 text-lg text-center font-bold transform scale-y-0 origin-top transition-all duration-300 md:hidden"
+            >
+              <a href="#about" class="block hover:text-orange-400">About</a>
+              <a href="#experience" class="block hover:text-orange-400">Experience</a>
+              <a href="#projects" class="block hover:text-orange-400">Projects</a>
+              <a href="/blogs" class="block hover:text-orange-400">Blog</a>
+              <a href="/contact" class="block hover:text-orange-400">Contact Me</a>
+            </div>
+          </nav>
+        </header>  
+    <!-- Project Gist-->
+    <section >
+      <div class="max-w-5xl mx-auto py-16 px-12 md:px-6">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <!-- Text Content -->
+          <div class="flex-1">
+            <h2 class="text-3xl md:text-4xl font-semibold">
+              Fairmed India Project
+            </h2>
+            <hr class="my-4 border-gray-300" />
+            <div
+              class="flex justify-between text-textColorLight font-medium md:text-xl px-3"
+              >
+              <h4>Fairmed India</h4>
+              <h4>March 2025</h4>
+            </div>
+            <div class="space-y-4 text-xl mt-8 leading-relaxed">
+              <p>
+                Fairmed India is a social development organization dedicated to
+                “health for the poorest”   working to address health inequities,
+                support marginalized communities, prevent disability due to
+                neglected diseases, and rehabilitate people affected by leprosy
+                across India.
+              </p>
+              <p>Fairmed's work spans</p>
+              <ul class="list-disc list-inside">
+                <li>prevention</li>
+                <li>treatment</li>
+                <li>rehabilitation</li>
+                <li>community empowerment</li>
+                <li>education</li>
+                <li>innovation in health and systems</li>
+              </ul>
+              <p>
+                The core goal of this project was to create a modern,
+                accessible, scalable, responsive website built in React, to more
+                effectively communicate Fairmed India's mission, impact,
+                programs, and opportunities for support and engagement.
+              </p>
+              <p>
+                This case study outlines the design strategy, user research
+                insights, visual and information architecture decisions,
+                technical implementation in React, and the outcome and learnings
+                from this project.
+              </p>
+            </div>
+          </div>
+          <!-- Image -->
+          <div class="flex-1 max-w-lg">
+            <img
+              src="../img/fairmedHero.PNG"
+              alt="Pet sitter website image"
+              class="w-full rounded-lg shadow"
+              />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- The challenge -->
+    <section >
+    <div class="max-w-5xl mx-auto  px-12 md:px-6 ">
+      <h2 class="text-3xl md:text-4xl font-semibold mb-10">
+        Understanding the Organization & Goals
+      </h2>
+      <div class="text-xl space-y-6 leading-relaxed">
+        <p>
+          Fairmed India works at the confluence of healthcare, social justice,
+          community empowerment, and grassroots engagement.Their existing online
+          presence was functional but lacked:
+        </p>
+        <ul class="list-disc list-inside">
+          <li>
+            A unified brand and visual identity reflecting the compassionate,
+            human-centered mission
+          </li>
+          <li>
+            Clear, structured narratives about what they do and why it matters
+          </li>
+          <li>
+            Easy access to impact stories, programs, and opportunities for
+            support/donation
+          </li>
+          <li>A scalable web architecture for ongoing content growth</li>
+          <li>
+            Intuitive navigation for diverse global stakeholders: donors,
+            volunteers, beneficiaries, partners, researchers, and the public
+          </li>
+        </ul>
+        <p>The key goals for the new website were:</p>
+        <ul class="list-decimal list-inside">
+          <li>
+            <strong>Communicate the mission clearly</strong>   letting people
+            understand why Fairmed exists and what it achieves
+          </li>
+          <li>
+            <strong>Highlight projects and impact</strong>   program pages for
+            health initiatives, rehabilitation, prevention, and empowerment
+          </li>
+          <li>
+            <strong>Encourage action</strong>   support, donate, partner,
+            volunteer
+          </li>
+          <li>
+            <strong>Deliver a scalable, maintainable web platform</strong> using
+            <strong>React</strong> to allow future enhancements
+          </li>
+        </ul>
+        <h2 class="text-3xl font-bold text-center py-10  md:text-4xl">
+          Initial Mental Model
+        </h2>
+        <div class="max-w-xl mx-3 md:mx-auto">
+          <img
+            src="../img/project2Img1.jpeg"
+            alt="Image of sketch"
+            class="w-full brightness-50 rounded-3xl"
+            />
+        </div>
+        <p class="mt-4">
+          To achieve the goals outlined above, the initial approach was to
+          create a mind map of the deliverable. The most challenging yet
+          interesting aspect was positioning the key elements in a way that
+          allowed viewers to grasp the objectives at a glance.
+        </p>
+        <p>
+          In other words, making the interface highly informative while keeping
+          the information clear and easy to digest was my top priority, in line
+          with the client's requirements.
+        </p>
+        <p>
+          Although the sketches appeared simple, they required considerable time
+          and iteration. I explored multiple variations, and this particular
+          sketch proved to be pivotal, effectively addressing nearly 50% of the
+          overall challenge.
+        </p>
+        <p class="text-xl text-purple-500 font-bold md:2xl">
+          About Us → Our Work/Projects → Our Impact → How Your Donation Makes a
+          Difference
+        </p>
+      </div>
+    </div>
+    <!-- Discovery & Research -->
+    <section class="mt-16">
+      <div class="max-w-5xl mx-auto  px-12 md:px-6">
+        <h2 class="text-3xl md:text-4xl font-semibold mb-4">
+          Discovery & Research
+        </h2>
+        <div class="text-xl space-y-6 leading-relaxed">
+          <h4 class="text-2xl font-semibold">
+            Stakeholder Interviews & Content Audit
+          </h4>
+          <p>
+            To kick off, we conducted structured content and stakeholder research:
+          </p>
+          <ul class="list-disc list-inside">
+            <li>
+              <strong>Reviewed Fairmed India's existing site content:</strong>
+              home, about, projects, team, partner networks, history, transparency
+              docs, and legal content.
+            </li>
+            <li>
+              <strong>
+              Interviewed internal stakeholders (leadership, program managers,
+              communications team)</strong
+                >
+              to understand the most valuable messages, audiences, and action
+              pathways.
+            </li>
+            <li>
+              <strong>
+              Audited existing analytics (where available) to identify user pain
+              points:</strong
+                >
+              difficulty finding program details, confusing navigation, absence of
+              clear donate/support paths, and mixed content structure.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- Use cases-->
+    <section class="mt-16">
+      <div class="max-w-5xl mx-auto  px-12 md:px-6 ">
+        <h2 class="text-3xl md:text-4xl font-semibold mb-4">
+          Persona & Use Cases
+        </h2>
+        <div class="text-xl space-y-6 leading-relaxed">
+          <p class="font-semibold">
+            Based on this research, we synthesized primary user personas:
+          </p>
+          <ul class="list-disc list-inside">
+            <li>
+              <strong>Donor / Supporter</strong> wants quick clarity on impact,
+              urgent causes, and how to donate
+            </li>
+            <li>
+              <strong>Partner / NGO Network</strong> needs detailed project info,
+              transparency, and accountability
+            </li>
+            <li>
+              <strong>Community Beneficiary or Advocate </strong>seeks resources,
+              health info, and local support contacts
+            </li>
+            <li>
+              <strong>Volunteer / Student</strong> wants to understand programs
+              and opportunities for engagement
+            </li>
+          </ul>
+          These personas guided site architecture, content grouping, and calls to
+          action.
+          <div >
+            <img
+              src="../img/project2Img2.jpeg"
+              alt=""
+              class="w-full rounded-3xl"
+              />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Content strategy -->
+    <section class="mt-16">
+      <div class="max-w-5xl mx-auto  px-12 md:px-6 ">
+        <h2 class="text-3xl md:text-4xl font-semibold mb-4">
+          Content & Structure Strategy
+        </h2>
+        <div class="text-xl space-y-6 leading-relaxed">
+          <p class="font-semibold">
+            We mapped out a detailed site architecture to serve each persona:
+          </p>
+          <h3 class="font-semibold">Core Navigation</h3>
+          <ul class="list-disc list-inside">
+            <li>
+              <strong>Home</strong> strong mission lead, visual impact metrics,
+              quick links
+            </li>
+            <li>
+              <strong>Challenges</strong> segmented definitions of neglected
+              diseases, disability prevention, community health barriers
+            </li>
+            <li>
+              <strong>Our Projects</strong> segmented by projects in India and
+              ongoing projects for easier discovery
+            </li>
+            <li>
+              <strong>About Us</strong> mission, vision, mandate, history,
+              transparency
+            </li>
+            <li><strong>Team</strong> face and structure of the organization</li>
+            <li><strong>Contact / Donate</strong> critical action pathways</li>
+            <li>
+              <strong>Legal & Reports</strong> access to terms, privacy, annual
+              reports
+            </li>
+          </ul>
+          <p>
+            These personas guided site architecture, content grouping, and calls
+            to action.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Section to show transperancy -->
+    <section class="mt-16">
+      <div class="max-w-5xl mx-auto  px-12 md:px-6 ">
+        <div class="gap-6 max-w-4xl mx-2 space-y-10 md:mx-auto md:gap-10">
+          <img src="../img/project2Img3.jpeg" alt="" class="w-full rounded-3xl" />
+          <img src="../img/project2Img4.jpeg" alt="" class="w-full rounded-3xl" />
+        </div>
+      </div>
+    </section>
+    <!-- Visuals & UI -->
+    <section class="mt-16" >
+      <div class="max-w-5xl mx-auto  px-12 md:px-6 ">
+        <h2 class="text-3xl md:text-4xl font-semibold mb-4">
+          Visual & UI Design
+        </h2>
+        <div class="text-xl space-y-6 leading-relaxed">
+          <p class="font-semibold">
+            We chose a clean, mission-focused visual aesthetic to reflect Fairmed
+            India's values:
+          </p>
+          <ul class="list-disc list-inside">
+            <li>
+              <strong>Color palette:</strong> Trust-oriented blues and human
+              warmth neutrals to evoke health, compassion, and reliability
+            </li>
+            <li>
+              <strong>Typography:</strong> Readable, accessible fonts with clear
+              hierarchy
+            </li>
+            <li>
+              <strong>Imagery:</strong> Real visuals of communities, health
+              workers, and impact (where permitted) to strengthen emotional
+              connection
+            </li>
+            <li>
+              <strong>Iconography:</strong> Simple, thematic icons to represent
+              neglected diseases, disability prevention, social empowerment, etc.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- Color selection figma-->
+    <section class="mt-16">              
+      <div >
+        <div class="flex flex-col gap-3 max-w-4xl mx-4 bg-stone-500 p-10 rounded-xl md:mx-auto md:flex-row" >
+          <img src="../img/project2Img6.jpeg" alt="" class="ring-3 flex-1 ring-green-500 rounded-3xl " >
+        </div>
+      </div>
+    </div>
+</section>
+    <!-- Responsive design -->
+    <section class="mt-16">
+      <div class="max-w-6xl mx-auto  px-12 md:px-6 ">
+        <h2 class="text-3xl md:text-4xl font-semibold mb-4">
+          Responsive Layout & Accessibility
+        </h2>
+        <div class="text-xl space-y-6 leading-relaxed">
+          <p class="font-semibold">
+            The layout was designed to be fully responsive across devices. Pages
+            were structured so that:
+          </p>
+          <ul class="list-disc list-inside">
+            <li>Text content scales fluidly</li>
+            <li>Images adapt using responsive techniques</li>
+            <li>Navigation remains sticky on scroll for ease of use</li>
+          </ul>
+        </div>
+    </section>
+    <!-- Responsive images -->
+    <section class="mt-16">
+              
+              <div >
+                <div class="flex flex-col gap-3 max-w-4xl mx-4 bg-stone-500 p-10 rounded-xl lg:mx-auto md:flex-row" >
+                  <img src="../img/fairmedHero.PNG" alt="" class="rounded" >
+                  <hr class="">
+                  <img src="../img/project2Img5.jpeg" alt="" class="ring-3 flex-1 ring-green-500 rounded-3xl " >
+                </div>
+              </div>
+            </div>
+    </section>
+    <!-- Technical Implementation -->
+    <section class="mt-16">
+      <div class="max-w-5xl mx-auto  px-12 md:px-6 ">
+        <h2 class="text-3xl md:text-4xl font-semibold mb-4">
+          Technical Implementation (React)
+        </h2>
+        <div class="text-xl space-y-6 leading-relaxed">
+          <p class="font-semibold">
+            Given the need for future-ready structure and dynamic content growth, the site was 
+            built with <strong>React</strong>
+          </p>
+          <h3 class="font-semibold">Why React?</h3>
+          <ul class="list-disc list-inside">
+            <li>Component-based architecture for scalable development</li>
+            <li>Easy reuse of UI components across pages (e.g., hero section, project cards, team lists)</li>
+            <li>Dynamic, interactive experiences without page reloads</li>
+            <li>Integration with content management APIs or CMS connectors in the futu</li>
+          </ul>
+          <h3 class="font-semibold">
+            Component Architecture
+          </h3>
+          <ul class="list-disc list-inside">
+            <li><strong>Layout Components</strong> Header, Footer, Navigation</li>
+            <li><strong>Modules </strong> Hero Banner, Info Sections, Project Cards, Donation CTA, Team Profiles</li>
+            <li><strong>Utilities</strong> Responsive image loader, accessibility utilities, state management for nav and modals</li>
+          </ul>
+          <h3 class="font-semibold">Routing & State</h3>
+          <p>The site uses react-router for clean URL navigation. Each major page is a component with its own sub-routing (e.g., Projects › Project Detail). 
+            Global state for navigation and UI interactions is managed through React Context.
+          </p>
+          <h3 class="font-semibold">
+            Responsive Images & Performance
+          </h3>
+          <p>
+            We implemented best practices for responsive images and code splitting to improve load times   ensuring an optimal experience on both desktop and mobile.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Launch and outcome-->
+    <section class="mt-16">
+      <div class="max-w-5xl mx-auto  px-12 md:px-6 ">
+        <h2 class="text-3xl md:text-4xl font-semibold mb-4">
+          Launch & Outcomes
+        </h2>
+        <div class="text-xl space-y-6 leading-relaxed">
+          <p class="font-semibold">
+            The new Fairmed India website delivers:
+          </p>
+          <div>
+            <h3 class="font-semibold">Improved Clarity</h3>
+            <p>Users can now rapidly understand Fairmed's mission, scope, and impact.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold">Enhanced Navigation & UX</h3>
+            <p>Detailed navigation, clear labels, and sectional links make information easier to discover.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold">Scalable React Architecture</h3>
+            <p>Built with reusable components so the organization can extend, optimize, and integrate future features.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Summary -->
+    <section class="mt-16">
+      <div class="max-w-5xl mx-auto  px-12 md:px-6 ">
+        <h2 class="text-3xl md:text-4xl font-semibold mb-4">
+          Conclusion
+        </h2>
+        <div class="text-xl space-y-6 leading-relaxed">
+          <p>
+            This project transformed Fairmed India's web presence into a purposeful, user-centric, scalable, and 
+            visually coherent digital platform. Built using React, with a research-led design process and structured 
+            content strategy, the new Fairmed India website better serves its mission, community, and global stakeholders.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class=" mb-7 mt-16 mb:mt-20">
+      <div
+        class="text-center grid grid-cols-2 md:space-x-10 gap-y-3 md:block text-2xl font-medium"
+      >
+        <a href="#about" class="hover:text-orange-400 duration-200">About</a>
+        <a href="#experience" class="hover:text-orange-400 duration-200"
+          >Experience</a
+        >
+        <a href="#projects" class="hover:text-orange-400 duration-200"
+          >Projects</a
+        >
+        <a href="http://localhost:3000/blogs" class="hover:text-orange-400 duration-200">Blogs</a>
+      </div>
+      <div class="text-center my-7 py-10 text-4xl md:text-5xl">
+        <a href=""><i class="fa-brands fa-github"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+      <p
+        class="font-semibold text-textColorLight text-center mt-10 px-3 md:mt-14"
+      >
+        Copyright &copy 2025 Shazid. All rights reserved.
+      </p>
+    </footer>
+
+<script src="../app.js"></script>
+  </body>
+</html>

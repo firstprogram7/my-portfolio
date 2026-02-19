@@ -1,0 +1,73 @@
+require("dotenv").config();
+const express = require("express");
+const app = express();
+const path = require("path");
+const mongoose = require("mongoose");
+const User = require("./model/user");
+const PORT = process.env.PORT || 5000;
+app.use(express.static(path.join(__dirname, "public")));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
+// Mongoose set up
+async function connectDB() {
+  try {
+    await mongoose.connect(process.env.MONGODB_URI);
+    console.log("Connected to MongoDB!");
+  } catch (err) {
+    console.error("Couldn't connect to MongoDB", err);
+  }
+}
+connectDB();
+
+// Route for main profile
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/pages/index.html"));
+});
+//Route for blog menu page
+app.get("/blogs", (req, res) => {
+  res.render("blogMenu");
+});
+app.post("/blogs", async (req, res) => {
+  const { email } = req.body;
+  const Subscriber = await User.create({
+    name: "subscriber",
+    email: email,
+    message: "N/A",
+  });
+  await Subscriber.save();
+  res.json({success:true})
+});
+//Route for sub-blogs
+app.get("/blogs/:blog", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "public/pages/blogs", `${req.params.blog}.html`)
+  );
+});
+
+//Routes for projects
+app.get("/projects/:project", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "public/pages", `${req.params.project}.html`)
+  );
+});
+
+// Contact form routes
+app.get("/contact", (req, res) => {
+  res.render("Contact");
+});
+app.post("/contact", async (req, res) => {
+  const { name, email, message } = req.body;
+  const newUser = await User.create({
+    name,
+    email,
+    message,
+  });
+  await newUser.save();
+  res.redirect("/contact");
+});
+
+app.listen(PORT, () => {
+  console.log(`Listening to port ${PORT}`);
+});

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/output.css" />
+    <title>My React learning journey</title>
+  </head>
+  <body>
+    <!-- Dark theme toggle -->
+    <section>
+      <div class="flex justify-end px-4 pt-3">
+        <div
+          class="switch px-3 py-1 rounded-full space-x-2 max-w-20 bg-stone-100 hover:bg-stone-200 dark:bg-stone-700 dark:border-transparent border border-stone-300 shadow-sm duration-300"
+        >
+          <i class="fa-regular fa-sun dark:text-stone-500 cursor-pointer"></i
+          ><i class="fa-solid fa-moon text-stone-300 cursor-pointer"></i>
+        </div>
+      </div>
+    </section>
+    <!-- Navbar -->
+    <header class="relative z-50">
+      <nav class="container mx-auto">
+        <div class="flex justify-between items-center px-4 py-4">
+          <!-- Logo -->
+          <a href="/" class="text-4xl font-bold md:text-5xl">Shazid</a>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex space-x-6">
+            <a
+              href="#about"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >About</a
+            >
+            <a
+              href="#experience"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >Experience</a
+            >
+            <a
+              href="#projects"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >Projects</a
+            >
+            <a
+              href="/blogs"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >Blog</a
+            >
+            <a
+              href="/contact"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >Contact Me</a
+            >
+          </div>
+
+          <!-- Hamburger Button -->
+          <button id="hamburger" class="md:hidden flex flex-col gap-1.5">
+            <span
+              class="h-1 w-8 bg-textColorDark dark:bg-textOffWhite block transition-all"
+            ></span>
+            <span
+              class="h-1 w-8 bg-textColorDark dark:bg-textOffWhite block transition-all"
+            ></span>
+            <span
+              class="h-1 w-8 bg-textColorDark dark:bg-textOffWhite block transition-all"
+            ></span>
+          </button>
+        </div>
+
+        <!-- MOBILE MENU (ABSOLUTE) -->
+        <div
+          id="mobileMenu"
+          class="absolute left-0 top-full w-full bg-textOffWhite dark:bg-darkBackground shadow-lg py-10 px-6 space-y-6 text-lg text-center font-bold transform scale-y-0 origin-top transition-all duration-300 md:hidden"
+        >
+          <a href="#about" class="block hover:text-orange-400">About</a>
+          <a href="#experience" class="block hover:text-orange-400"
+            >Experience</a
+          >
+          <a href="#projects" class="block hover:text-orange-400">Projects</a>
+          <a href="/blogs" class="block hover:text-orange-400">Blog</a>
+          <a href="/contact" class="block hover:text-orange-400">Contact Me</a>
+        </div>
+      </nav>
+    </header>
+    <main class="max-w-6xl mx-auto">
+      <!-- Hero section -->
+      <section class="p-20">
+        <div class="space-y-4 leading-normal">
+          <h2 class="text-3xl font-semibold md:text-5xl">
+            How I Finally Learned React After Initially Struggling Through Many
+            Confusing Topics
+          </h2>
+          <p class="text-xl font-semibold text-textColorLight md:text-2xl">
+            From confusion to confidence: my practical journey mastering React
+            fundamentals.
+          </p>
+          <div
+            class="flex flex-col justify-between space-y-1 max-w-96 md:flex-row md:items-center"
+          >
+            <img
+              src="/img/profile_pic.jpeg"
+              alt="Blogger Image"
+              class="w-12 rounded-full"
+            />
+            <p class="font-medium text-xl text-textColorLight">15 min read</p>
+            <p class="font-medium text-xl text-textColorLight">June 6, 2025</p>
+          </div>
+        </div>
+      </section>
+      <!-- Key take away section-->
+      <section class="mt-10">
+        <div
+          class="max-w-5xl bg-gray-300 p-20 mx-3 space-y-4 rounded-3xl md:mx-auto"
+        >
+          <h2 class="text-3xl font-semibold">Key takeaways</h2>
+          <ul
+            class="list-disc list-inside space-y-2 text-xl font-medium text-textColorLight"
+          >
+            <li>
+              React feels confusing at first because it introduces new mental
+              models, not because you are bad at programming.
+            </li>
+            <li>
+              Understanding core concepts like components, state, and props
+              matters far more than memorizing syntax.
+            </li>
+            <li>
+              Building small, imperfect projects is the fastest way to truly
+              learn React.
+            </li>
+            <li>
+              Struggling, feeling stuck, and revisiting concepts multiple times
+              is a normal part of the learning process.
+            </li>
+            <li>
+              Once React “clicks,” it becomes one of the most enjoyable tools
+              for building user interfaces.
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Blog Intro -->
+      <section class="p-20">
+        <div class="text-xl font-medium space-y-10">
+          <h2>
+            How I Finally Learned React After Initially Struggling Through Many
+            Confusing Topics
+          </h2>
+
+          <p>
+            Learning React was one of the most frustrating experiences of my
+            developer journey—and also one of the most rewarding. When I first
+            opened a React tutorial, I was confident. I already knew HTML, CSS,
+            and JavaScript. How hard could a library be?
+          </p>
+
+          <p>As it turns out, very hard. Or at least, very confusing.</p>
+
+          <p>
+            Words like <strong>JSX</strong>, <strong>state</strong>,
+            <strong>props</strong>, <strong>hooks</strong>,
+            <strong>virtual DOM</strong>, and
+            <strong>component lifecycle</strong> were thrown at me almost
+            immediately. Tutorials jumped from simple examples to complex
+            patterns without explaining <em>why</em> things worked the way they
+            did. I felt lost, overwhelmed, and honestly questioned whether React
+            was even for me.
+          </p>
+
+          <p>
+            But eventually, something changed. React started making sense.
+            Concepts clicked. The chaos became structure. In this post, I want
+            to share exactly how I went from struggling and confused to
+            confident and productive with React. If you're currently stuck where
+            I once was, this story is for you.
+          </p>
+
+          <h2>The Initial Struggle: Why React Felt So Hard</h2>
+
+          <p>
+            The biggest mistake I made early on was assuming React was “just
+            JavaScript with some extra syntax.” While React
+            <em>uses</em> JavaScript, it requires a completely different way of
+            thinking about user interfaces.
+          </p>
+
+          <p>
+            Traditional JavaScript encourages you to manually manipulate the
+            DOM. You select elements, update their content, and handle events
+            directly. React, on the other hand, asks you to describe what the UI
+            should look like based on state—and then trust React to handle the
+            updates.
+          </p>
+
+          <p>
+            This mental shift was not obvious to me at first. I kept asking
+            questions like:
+          </p>
+
+          <ul class="list-disc list-inside">
+            <li>Why can't I just change the DOM directly?</li>
+            <li>Why does my component re-render so often?</li>
+            <li>Why does state update asynchronously?</li>
+            <li>Why does everything feel so abstract?</li>
+          </ul>
+
+          <p>
+            Instead of slowing down to understand these ideas, I tried to push
+            forward. I copied code from tutorials, watched videos at 1.5x speed,
+            and hoped things would magically click. Spoiler: they didn't.
+          </p>
+
+          <h2>The Turning Point: Accepting That Confusion Is Normal</h2>
+
+          <p>The turning point came when I stopped blaming myself.</p>
+
+          <p>
+            I realized that React is confusing for almost everyone at the
+            beginning. It introduces abstractions that only make sense after
+            you've used them for a while. Feeling lost didn't mean I was
+            failing—it meant I was learning something genuinely new.
+          </p>
+
+          <p>
+            Once I accepted this, I changed my approach. Instead of trying to
+            understand everything at once, I focused on mastering the
+            fundamentals.
+          </p>
+
+          <h2>Focusing on the Core Concepts (And Ignoring the Noise)</h2>
+
+          <p>
+            One of the biggest breakthroughs was narrowing my focus. React has a
+            massive ecosystem, but you don't need to learn all of it at once.
+          </p>
+
+          <p>I decided to focus on just a few core ideas:</p>
+
+          <ul class="list-disc list-inside">
+            <li>
+              <strong>Components:</strong> Understanding that everything in
+              React is a reusable component.
+            </li>
+            <li>
+              <strong>JSX:</strong> Learning how JSX translates to JavaScript
+              and why it exists.
+            </li>
+            <li><strong>Props:</strong> Passing data down to components.</li>
+            <li>
+              <strong>State:</strong> Managing data that changes over time.
+            </li>
+            <li><strong>Events:</strong> Handling user interactions.</li>
+          </ul>
+
+          <p>
+            I deliberately ignored advanced topics like Redux, context
+            optimization, performance tricks, and complex hooks. This reduced my
+            cognitive load and helped me build confidence.
+          </p>
+
+          <h2>Building Tiny Projects Instead of Watching Endless Tutorials</h2>
+
+          <p>
+            Another major shift was moving from passive learning to active
+            building.
+          </p>
+
+          <p>
+            Tutorials made sense while I watched them, but the moment I tried to
+            write code on my own, my mind went blank. So I started building very
+            small projects—projects so small they almost felt silly.
+          </p>
+
+          <p>Some examples included:</p>
+
+          <ul class="list-disc list-inside">
+            <li>A counter app with increment and decrement buttons</li>
+            <li>A simple to-do list without any styling</li>
+            <li>A form that captures user input and displays it</li>
+            <li>A basic toggle switch using state</li>
+          </ul>
+
+          <p>
+            These projects forced me to confront my misunderstandings. Every bug
+            became a learning opportunity. Slowly, I stopped Googling every line
+            of code and started reasoning through problems myself.
+          </p>
+
+          <h2>Understanding State Changed Everything</h2>
+
+          <p>
+            State was the single most confusing concept for me—and also the most
+            important.
+          </p>
+
+          <p>
+            Once I truly understood that state represents data that controls how
+            a component renders, React suddenly made sense. Instead of thinking
+            in terms of “changing the UI,” I started thinking in terms of
+            “updating state.”
+          </p>
+
+          <p>This shift helped me understand:</p>
+
+          <ul class="list-disc list-inside">
+            <li>Why components re-render</li>
+            <li>Why state updates trigger UI changes</li>
+            <li>Why React prefers immutability</li>
+          </ul>
+
+          <p>
+            Hooks like <code>useState</code> and <code>useEffect</code> felt
+            much less magical once I understood the problems they were solving.
+          </p>
+
+          <h2>Revisiting Concepts (Again and Again)</h2>
+
+          <p>
+            One thing that surprised me was how often I had to relearn the same
+            concepts. I didn't fully understand props the first time. Or the
+            second. Or even the third.
+          </p>
+
+          <p>
+            But each time I revisited them, my understanding deepened. React
+            concepts layer on top of each other, and clarity comes gradually,
+            not instantly.
+          </p>
+
+          <p>
+            Instead of feeling frustrated, I learned to see repetition as
+            progress.
+          </p>
+
+          <h2>The Moment React Finally Clicked</h2>
+
+          <p>The “aha” moment didn't come all at once. It happened quietly.</p>
+
+          <p>
+            One day, I built a feature without needing a tutorial. I structured
+            components naturally, managed state confidently, and debugged issues
+            without panic.
+          </p>
+
+          <p>
+            That's when I realized I had finally learned React. Not because I
+            knew everything—but because I understood how to think in React.
+          </p>
+
+          <!-- Summary -->
+
+          <h2 class="text-3xl font-semibold">Conclusion</h2>
+          <p>
+            Learning React was not a straight path. It was messy, confusing, and
+            full of self-doubt. But the struggle was not a sign of failure—it
+            was part of the process.
+          </p>
+
+          <p>
+            By focusing on core concepts, building small projects, embracing
+            confusion, and revisiting ideas multiple times, I eventually
+            developed a strong mental model of React.
+          </p>
+
+          <p>
+            If you're struggling with React right now, don't give up. Confusion
+            is temporary, and clarity comes with patience and practice. One day,
+            React will click for you too—and when it does, the journey will be
+            worth it.
+          </p>
+        </div>
+      </section>
+    </main>
+ <!-- Blog suggestions -->
+ <section class="space-y-1 md:space-y-6">
+  <h2 class="text-4xl text-center font-bold md:text-5xl">Related Blogs</h2>
+  <div
+    class="flex flex-col py-10 max-w-6xl mx-5 gap-5 md:gap-2 md:py-3 lg:mx-auto lg:flex-row items-stretch"
+  >
+    <!-- Card#1 -->
+    <a href="/blogs/effective-seo-tips" class="flex-1">
+      <div
+        class="flex flex-col-reverse bg-white dark:bg-stone-700 gap-2 shadow rounded-3xl h-full min-h-[260px] md:flex-row md:gap-6"
+      >
+        <!-- Text -->
+        <div class="space-y-6 px-3 py-4 flex-1">
+          <p
+            class="text-xs font-bold text-blue-700 bg-blue-200 w-40 text-center px-1 rounded-full"
+          >
+            MORDERN WEB APPS
+          </p>
+          <h2 class="text-xl font-semibold">
+            Why Every Small Business Needs a Clean, Modern Website
+          </h2>
+          <div
+            class="font-semibold dark:text-stone-400 text-textColorLight"
+          >
+            <p>15 min</p>
+            <p>September 14, 2025</p>
+          </div>
+        </div>
+
+        <!-- Image -->
+        <div class="w-36 p-3 flex-shrink-0">
+          <img
+            src="../img/cleanWebsite.jpg"
+            alt=""
+            class="w-full rounded-3xl"
+          />
+        </div>
+      </div>
+    </a>
+    <!-- Card#2-->
+    <a href="/blogs/ai-powered-websites" class="flex-1">
+      <div
+        class="flex flex-col-reverse bg-white dark:bg-stone-700 gap-2 shadow rounded-3xl h-full min-h-[260px] md:flex-row md:gap-6"
+      >
+        <!-- Text -->
+        <div class="space-y-6 px-3 py-4 flex-1">
+          <p
+            class="text-xs font-bold text-blue-700 bg-blue-200 w-40 text-center px-1 rounded-full"
+          >
+            AI POWERED WEBSITES
+          </p>
+          <h2 class="text-xl font-semibold">
+            How AI-Powered Websites Are Helping Small Businesses Get More
+            Leads Without Hiring Extra Staff
+          </h2>
+          <div
+            class="font-semibold text-textColorLight dark:text-stone-400"
+          >
+            <p>16 min</p>
+            <p>November 17, 2025</p>
+          </div>
+        </div>
+
+        <!-- Image -->
+        <div class="w-36 p-3 flex-shrink-0">
+          <img
+            src="../img/aiPowered.jpg"
+            alt=""
+            class="w-full rounded-3xl"
+          />
+        </div>
+      </div>
+    </a>
+    <!-- Card#3 -->
+    <a href="/blogs/motivation-in-learning" class="flex-1">
+      <div
+        class="flex flex-col-reverse bg-white dark:bg-stone-700 gap-2 shadow rounded-3xl h-full min-h-[260px] md:flex-row md:gap-6"
+      >
+        <!-- Text -->
+        <div class="space-y-6 px-3 py-4 flex-1">
+          <p
+            class="text-xs font-bold text-blue-700 bg-blue-200 w-40 text-center rounded-full"
+          >
+            STAYING MOTIVATED
+          </p>
+          <h2 class="text-xl font-semibold">
+            How I Stay Motivated Learning New Technologies and Applying Them
+            Effectively Daily
+          </h2>
+          <div
+            class="font-semibold text-textColorLight dark:text-stone-400"
+          >
+            <p>15 min read</p>
+            <p>July 6, 2025</p>
+          </div>
+        </div>
+
+        <!-- Image -->
+        <div class="w-36 p-3 flex-shrink-0">
+          <img
+            src="../img/dailyWork.jpg"
+            alt=""
+            class="w-full rounded-3xl"
+          />
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+
+    <!-- Footer Section -->
+    <footer class="mb-7 mt-16 mb:mt-20">
+      <div
+        class="text-center grid grid-cols-2 md:space-x-10 gap-y-3 md:block text-2xl font-medium"
+      >
+        <a href="#about" class="hover:text-orange-400 duration-200">About</a>
+        <a href="#experience" class="hover:text-orange-400 duration-200"
+          >Experience</a
+        >
+        <a href="#projects" class="hover:text-orange-400 duration-200"
+          >Projects</a
+        >
+        <a
+          href="http://localhost:3000/blogs"
+          class="hover:text-orange-400 duration-200"
+          >Blogs</a
+        >
+      </div>
+      <div class="text-center my-7 py-10 text-4xl md:text-5xl">
+        <a href=""><i class="fa-brands fa-github"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+      <p
+        class="font-semibold text-textColorLight text-center mt-10 px-3 md:mt-14"
+      >
+        Copyright &copy 2025 Shazid. All rights reserved.
+      </p>
+    </footer>
+    <script src="/app.js"></script>
+  </body>
+</html>

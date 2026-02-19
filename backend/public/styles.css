@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+    background: #f0efec;
+    color:#303030;
+    transition: 0.3s ease;
+}
+
+html.dark{
+    background: #252525;
+    color:#f0efec;
+    transition: 0.3s ease;
+}
+
+.scroll-animation {
+    opacity: 0;
+    transition: all .5s ease-in-out;
+  }
+
+
+  .from-left {
+    transform: translateX(-150px);
+  }
+  .from-left.show {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .from-right {
+    transform: translateX(150px);
+  }
+  .from-right.show {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  .from-bottom {
+    transform: translateY(80px);
+  }
+  .from-bottom.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .from-top {
+    transform: translateY(-80px);
+  }
+  .from-top.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .fade-in.show {
+    opacity: 1;
+  }
+  
+/* Change Color */
+.text-scroll-color {
+    color: inherit;             /* original color */
+    transition: color 1s ease;
+  }
+  
+  .text-scroll-color.active {
+    color: #0096FF; /* Blue shade (you can change this) */
+  }
+  
+
+
+
+
+
+
+
+
+  /* * {
+    outline: 1px solid red !important;
+  } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

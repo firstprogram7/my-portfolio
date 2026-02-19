@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/output.css" />
+    <title>Mordern websites for businesses</title>
+  </head>
+  <body>
+    <!-- Dark theme toggle -->
+    <section>
+      <div class="flex justify-end px-4 pt-3">
+        <div
+          class="switch px-3 py-1 rounded-full space-x-2 max-w-20 bg-stone-100 hover:bg-stone-200 dark:bg-stone-700 dark:border-transparent border border-stone-300 shadow-sm duration-300"
+        >
+          <i class="fa-regular fa-sun dark:text-stone-500 cursor-pointer"></i
+          ><i class="fa-solid fa-moon text-stone-300 cursor-pointer"></i>
+        </div>
+      </div>
+    </section>
+    <!-- Navbar -->
+    <header class="relative z-50">
+      <nav class="container mx-auto">
+        <div class="flex justify-between items-center px-4 py-4">
+          <!-- Logo -->
+          <a href="/" class="text-4xl font-bold md:text-5xl">Shazid</a>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex space-x-6">
+            <a
+              href="#about"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >About</a
+            >
+            <a
+              href="#experience"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >Experience</a
+            >
+            <a
+              href="#projects"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >Projects</a
+            >
+            <a
+              href="/blogs"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >Blog</a
+            >
+            <a
+              href="/contact"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >Contact Me</a
+            >
+          </div>
+
+          <!-- Hamburger Button -->
+          <button id="hamburger" class="md:hidden flex flex-col gap-1.5">
+            <span
+              class="h-1 w-8 bg-textColorDark dark:bg-textOffWhite block transition-all"
+            ></span>
+            <span
+              class="h-1 w-8 bg-textColorDark dark:bg-textOffWhite block transition-all"
+            ></span>
+            <span
+              class="h-1 w-8 bg-textColorDark dark:bg-textOffWhite block transition-all"
+            ></span>
+          </button>
+        </div>
+
+        <!-- MOBILE MENU (ABSOLUTE) -->
+        <div
+          id="mobileMenu"
+          class="absolute left-0 top-full w-full bg-textOffWhite dark:bg-darkBackground shadow-lg py-10 px-6 space-y-6 text-lg text-center font-bold transform scale-y-0 origin-top transition-all duration-300 md:hidden"
+        >
+          <a href="#about" class="block hover:text-orange-400">About</a>
+          <a href="#experience" class="block hover:text-orange-400"
+            >Experience</a
+          >
+          <a href="#projects" class="block hover:text-orange-400">Projects</a>
+          <a href="/blogs" class="block hover:text-orange-400">Blog</a>
+          <a href="/contact" class="block hover:text-orange-400">Contact Me</a>
+        </div>
+      </nav>
+    </header>
+    <main class="max-w-6xl mx-auto">
+      <!-- Hero section -->
+      <section class="p-20">
+        <div class="space-y-4 leading-normal">
+          <h2 class="text-3xl font-semibold md:text-5xl">
+            Why Every Small Business Needs a Clean, Modern Website
+          </h2>
+          <p class="text-xl font-semibold text-textColorLight md:text-2xl">
+            A clean, modern website helps small businesses stand out, grow
+            credibility, and convert visitors into customers.
+          </p>
+          <div
+            class="flex flex-col justify-between space-y-1 max-w-96 md:flex-row md:items-center"
+          >
+            <img
+              src="/img/profile_pic.jpeg"
+              alt="Blogger Image"
+              class="w-12 rounded-full"
+            />
+            <p class="font-medium text-xl text-textColorLight">15 min read</p>
+            <p class="font-medium text-xl text-textColorLight">June 6, 2025</p>
+          </div>
+        </div>
+      </section>
+      <!-- Key take away section-->
+      <section class="mt-10">
+        <div
+          class="max-w-5xl bg-gray-300 p-20 mx-3 space-y-4 rounded-3xl md:mx-auto"
+        >
+          <h2 class="text-3xl font-semibold">Key takeaways</h2>
+          <ul
+            class="list-disc list-inside space-y-2 text-xl font-medium text-textColorLight"
+          >
+            <li>
+              <strong>First impressions matter:</strong> 75% of consumers judge
+              a company's credibility based on their website design, making a
+              modern website essential for building trust.
+            </li>
+            <li>
+              <strong>Mobile optimization is non-negotiable:</strong> With over
+              60% of web traffic coming from mobile devices, a responsive design
+              ensures you don't lose potential customers.
+            </li>
+            <li>
+              <strong>Your website works 24/7:</strong> Unlike physical stores,
+              a modern website serves as a tireless salesperson, providing
+              information and generating leads around the clock.
+            </li>
+            <li>
+              <strong>Level the playing field:</strong> A professional website
+              allows small businesses to compete with larger corporations by
+              establishing credibility and reaching wider audiences.
+            </li>
+            <li>
+              <strong>ROI that compounds:</strong> Investing in a quality
+              website delivers long-term returns through increased visibility,
+              customer acquisition, and operational efficiency.
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Blog Intro -->
+      <section class="p-20">
+        <div class="text-xl font-medium space-y-10">
+          <p>
+            In today's digital first world, your website is often the first
+            impression potential customers have of your business. For small
+            businesses competing in an increasingly online marketplace, having a
+            clean, modern website isn't just a nice to have feature—it's a
+            fundamental necessity for survival and growth. Whether you're a
+            local coffee shop, a consulting firm, or a boutique retailer, your
+            online presence can make or break your business success.
+          </p>
+          <h2>The Digital Storefront: Your 24/7 Sales Representative</h2>
+
+          <p>
+            Think of your website as a storefront that never closes. While
+            you're sleeping, spending time with family, or focusing on other
+            aspects of your business, your website continues working. It answers
+            questions, showcases your products or services, and can even process
+            orders or bookings without any manual intervention.
+          </p>
+
+          <p>
+            A clean, modern website acts as your most reliable employee. It
+            doesn't call in sick, never takes vacation days, and consistently
+            presents your business in the best possible light. For small
+            businesses with limited staff and resources, this 24/7 availability
+            is invaluable. Customers can research your offerings at midnight,
+            browse your portfolio on a Sunday morning, or submit an inquiry
+            during their lunch break—whenever it's convenient for them.
+          </p>
+
+          <h2>Credibility and Trust in the Digital Age</h2>
+
+          <p>
+            Here's a sobering statistic: studies show that 75% of users admit to
+            making judgments about a company's credibility based on their
+            website's design. If your website looks outdated, cluttered, or
+            unprofessional, potential customers will assume your business
+            operates the same way.
+          </p>
+
+          <p>
+            A modern, clean website communicates several important messages to
+            your visitors:
+          </p>
+
+          <ul class="list-decimal list-inside">
+            <li>
+              <strong>You're legitimate:</strong> In an era of online scams and
+              fly by night operations, a professional website establishes that
+              you're a real, trustworthy business.
+            </li>
+            <li>
+              <strong>You're current:</strong> An up to date design signals that
+              your business is active, relevant, and keeping pace with industry
+              standards.
+            </li>
+            <li>
+              <strong>You care about details:</strong> A well designed website
+              suggests you apply the same attention to detail to your products
+              or services.
+            </li>
+            <li>
+              <strong>You value customer experience:</strong> Easy navigation
+              and clean design show that you prioritize making things simple for
+              your customers.
+            </li>
+          </ul>
+
+          <p>
+            Remember, you rarely get a second chance to make a first impression.
+            In many cases, your website is that first impression, and you have
+            mere seconds to capture a visitor's attention before they move on to
+            a competitor.
+          </p>
+
+          <h2>Mobile First Is No Longer Optional</h2>
+
+          <p>
+            Mobile internet usage has surpassed desktop, with smartphones
+            accounting for more than 60% of web traffic globally. This shift
+            isn't temporary—it's the new normal. If your website isn't optimized
+            for mobile devices, you're essentially turning away more than half
+            of your potential customers at the door.
+          </p>
+
+          <p>
+            A modern website is built with responsive design, meaning it
+            automatically adapts to whatever device your visitor is using.
+            Whether someone accesses your site from a smartphone, tablet,
+            laptop, or desktop computer, they should have a seamless, user
+            friendly experience. Text should be readable without zooming,
+            buttons should be easily clickable with a thumb, and navigation
+            should be intuitive.
+          </p>
+
+          <p>
+            Google has also made mobile friendliness a ranking factor in search
+            results. This means that if your website isn't mobile optimized, it
+            will likely appear lower in search rankings, making it even harder
+            for potential customers to find you. A clean, modern website
+            designed with mobile users in mind isn't just about user
+            experience—it's about visibility and discoverability.
+          </p>
+
+          <h2>Competing with the Big Players</h2>
+
+          <p>
+            One of the most beautiful aspects of the internet is that it levels
+            the playing field. A small business with a professional, well
+            designed website can project an image that rivals—or even
+            surpasses—larger competitors. Online, size matters less than quality
+            and presentation.
+          </p>
+
+          <p>
+            Large corporations have bigger marketing budgets and more resources,
+            but they often struggle with bureaucracy and slow adaptation. As a
+            small business, you have agility on your side. You can update your
+            website quickly, respond to customer feedback immediately, and
+            showcase your personal touch and local expertise.
+          </p>
+
+          <p>
+            Your website can highlight what makes you unique: your story, your
+            commitment to customer service, your community involvement, or your
+            specialized expertise. These authentic, personal elements often
+            resonate more strongly with customers than the corporate polish of
+            larger competitors. A modern website gives you the platform to tell
+            your story effectively and compete for attention in your market.
+          </p>
+
+          <h2>Search Engine Visibility and Local Discovery</h2>
+
+          <p>
+            When people need a product or service, their first instinct is to
+            search online. "Near me" searches have increased dramatically, with
+            consumers looking for local businesses that can serve their
+            immediate needs. Without a website, you're invisible in these
+            crucial moments when potential customers are actively looking for
+            what you offer.
+          </p>
+
+          <p>
+            A clean, modern website optimized for search engines ensures that
+            you appear when people search for businesses like yours. Proper
+            structure, fast loading times, quality content, and mobile
+            optimization all contribute to better search engine rankings. Each
+            of these elements is naturally incorporated into modern web design
+            practices.
+          </p>
+
+          <p>
+            Beyond general search visibility, having a website is essential for
+            local SEO. When you create a website, you can verify your business
+            with Google, which improves your chances of appearing in local
+            search results and on Google Maps. This local visibility is pure
+            gold for small businesses that rely on customers in their geographic
+            area.
+          </p>
+
+          <h2>Cost Effective Marketing That Works While You Sleep</h2>
+
+          <p>
+            Traditional advertising—print ads, radio spots, billboards—requires
+            ongoing investment and stops working the moment you stop paying.
+            Your website, by contrast, is a one time investment (with minimal
+            maintenance costs) that continues delivering value indefinitely.
+          </p>
+
+          <p>
+            A modern website serves multiple marketing functions simultaneously.
+            It's your brochure, your portfolio, your testimonial showcase, your
+            FAQ document, and your contact form all rolled into one accessible
+            package. You can integrate it with social media, use it to build an
+            email list, publish blog content that attracts organic traffic, and
+            track visitor behavior to understand your audience better.
+          </p>
+
+          <p>
+            The analytics capabilities of modern websites are particularly
+            valuable for small businesses. You can see exactly how people find
+            you, which pages they visit, how long they stay, and where they lose
+            interest. This data is invaluable for refining your marketing
+            strategy and improving customer conversion rates—insights that would
+            cost thousands of dollars to obtain through traditional market
+            research.
+          </p>
+
+          <h2>Building Customer Relationships and Loyalty</h2>
+
+          <p>
+            A website isn't just about attracting new customers—it's also a
+            powerful tool for nurturing relationships with existing ones. Modern
+            websites can include customer portals, loyalty program information,
+            booking systems, and resources that add value beyond the initial
+            sale.
+          </p>
+
+          <p>
+            You can use your website to share helpful content, announce special
+            offers, showcase new products, or simply stay top of mind with your
+            audience. When customers know they can always visit your website to
+            check your hours, read your latest blog post, or access customer
+            support, they're more likely to choose you over competitors who lack
+            this accessibility.
+          </p>
+
+          <p>
+            Email integration allows you to build a mailing list and stay
+            connected with customers through regular newsletters or updates.
+            Social proof elements like customer reviews and testimonials build
+            trust and encourage repeat business. A modern website becomes the
+            hub of your entire customer relationship ecosystem.
+          </p>
+
+          <h2>Adapting to Changing Consumer Behavior</h2>
+
+          <p>
+            Consumer behavior has fundamentally changed. Today's customers do
+            extensive research before making purchasing decisions, even for
+            small, local services. They read reviews, compare options, check
+            websites, and look for businesses that make it easy to get
+            information and make decisions.
+          </p>
+
+          <p>
+            If your small business doesn't have a website—or has one that's
+            outdated and difficult to use—you're missing out on these research
+            driven customers. They'll simply move on to a competitor who makes
+            it easier for them to find information and take action.
+          </p>
+
+          <p>
+            Modern consumers also expect certain features as standard: clear
+            contact information, easy to find pricing (when applicable), online
+            booking or inquiry forms, mobile compatibility, and fast loading
+            times. These aren't luxury features—they're baseline expectations. A
+            clean, modern website meets these expectations and positions your
+            business as professional and customer focused.
+          </p>
+
+          <h2>The Investment That Pays for Itself</h2>
+
+          <p>
+            Some small business owners hesitate to invest in a quality website
+            due to cost concerns. However, when you consider the return on
+            investment, a modern website is one of the most cost effective
+            business decisions you can make.
+          </p>
+
+          <p>
+            Consider this: if your website converts just one additional customer
+            per month, it likely pays for itself within a year. In reality, a
+            good website will generate far more than one customer per month
+            through improved visibility, enhanced credibility, and better
+            customer experience.
+          </p>
+
+          <p>
+            The cost of not having a modern website is actually much higher than
+            the investment required to create one. Every day without a
+            professional online presence, you're losing potential customers to
+            competitors who have made this investment. You're missing out on
+            organic search traffic, local discovery, and the compounding
+            benefits of online visibility.
+          </p>
+
+          <div class="space-y-3">
+            <h2 class="text-3xl font-semibold">Conclusion</h2>
+            <p>
+              In the contemporary business landscape, a clean, modern website is
+              not a luxury—it's an essential tool for small business success.
+              Your website serves as a 24/7 sales representative, building
+              credibility and trust while showcasing your offerings to potential
+              customers around the clock. With mobile traffic dominating
+              internet usage, responsive design ensures you capture this crucial
+              audience segment.
+            </p>
+
+            <p>
+              A professional website levels the competitive playing field,
+              allowing small businesses to stand alongside larger competitors in
+              the digital space. It enhances your visibility in search results,
+              particularly for local searches that drive foot traffic and
+              inquiries. Beyond attracting new customers, your website serves as
+              a cost effective marketing hub that works continuously without
+              ongoing advertising expenses.
+            </p>
+
+            <p>
+              The investment in a quality website delivers compounding returns
+              through increased customer acquisition, improved operational
+              efficiency, and stronger customer relationships. In an era where
+              consumers research extensively before making decisions, lacking a
+              modern website means missing opportunities every single day. For
+              small businesses looking to grow and thrive in today's market, a
+              clean, modern website isn't just recommended—it's essential for
+              long term viability and success.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+     <!-- Blog suggestions -->
+     <section class="space-y-1 md:space-y-6">
+      <h2 class="text-4xl text-center font-bold md:text-5xl">Related Blogs</h2>
+      <div
+        class="flex flex-col py-10 max-w-6xl mx-5 gap-5 md:gap-2 md:py-3 lg:mx-auto lg:flex-row items-stretch"
+      >
+        <!-- Card#1 -->
+        <a href="/blogs/maintain-your-website" class="flex-1">
+          <div
+            class="flex flex-col-reverse bg-white dark:bg-stone-700 gap-2 shadow rounded-3xl h-full min-h-[260px] md:flex-row md:gap-6"
+          >
+            <!-- Text -->
+            <div class="space-y-6 px-3 py-4 flex-1">
+              <p
+                class="text-xs font-bold text-blue-700 bg-blue-200 w-40 text-center px-1 rounded-full"
+              >
+                Maintaining Website
+              </p>
+              <h2 class="text-xl font-semibold">
+                How To Maintain Your Website With These Easy Steps
+              </h2>
+              <div
+                class="font-semibold dark:text-stone-400 text-textColorLight"
+              >
+                <p>15 min</p>
+                <p>June 6, 2025</p>
+              </div>
+            </div>
+
+            <!-- Image -->
+            <div class="w-36 p-3 flex-shrink-0">
+              <img
+              src="../img/learnReact.jpg"
+                alt=""
+                class="w-full rounded-3xl"
+              />
+            </div>
+          </div>
+        </a>
+        <!-- Card#2-->
+        <a href="/blogs/ai-powered-websites" class="flex-1">
+          <div
+            class="flex flex-col-reverse bg-white dark:bg-stone-700 gap-2 shadow rounded-3xl h-full min-h-[260px] md:flex-row md:gap-6"
+          >
+            <!-- Text -->
+            <div class="space-y-6 px-3 py-4 flex-1">
+              <p
+                class="text-xs font-bold text-blue-700 bg-blue-200 w-40 text-center px-1 rounded-full"
+              >
+                AI POWERED WEBSITES
+              </p>
+              <h2 class="text-xl font-semibold">
+                How AI-Powered Websites Are Helping Small Businesses Get More
+                Leads Without Hiring Extra Staff
+              </h2>
+              <div
+                class="font-semibold text-textColorLight dark:text-stone-400"
+              >
+                <p>16 min</p>
+                <p>November 17, 2025</p>
+              </div>
+            </div>
+
+            <!-- Image -->
+            <div class="w-36 p-3 flex-shrink-0">
+              <img
+                src="../img/aiPowered.jpg"
+                alt=""
+                class="w-full rounded-3xl"
+              />
+            </div>
+          </div>
+        </a>
+        <!-- Card#3 -->
+        <a href="/blogs/effective-seo-tips" class="flex-1">
+          <div
+            class="flex flex-col-reverse bg-white dark:bg-stone-700 gap-2 shadow rounded-3xl h-full min-h-[260px] md:flex-row md:gap-6"
+          >
+            <!-- Text -->
+            <div class="space-y-6 px-3 py-4 flex-1">
+              <p
+                class="text-xs font-bold text-blue-700 bg-blue-200 w-40 text-center rounded-full"
+              >
+                INCREASE ONLINE SALES
+              </p>
+              <h2 class="text-xl font-semibold">
+                7 effective SEO tips to grow your business's local exposure for
+                better visibility
+              </h2>
+              <div
+                class="font-semibold text-textColorLight dark:text-stone-400"
+              >
+                <p>10 min read</p>
+                <p>April 8, 2025</p>
+              </div>
+            </div>
+
+            <!-- Image -->
+            <div class="w-36 p-3 flex-shrink-0">
+              <img src="../img/seo.jpg" alt="" class="w-full rounded-3xl" />
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="mb-7 mt-16 mb:mt-20">
+      <div
+        class="text-center grid grid-cols-2 md:space-x-10 gap-y-3 md:block text-2xl font-medium"
+      >
+        <a href="#about" class="hover:text-orange-400 duration-200">About</a>
+        <a href="#experience" class="hover:text-orange-400 duration-200"
+          >Experience</a
+        >
+        <a href="#projects" class="hover:text-orange-400 duration-200"
+          >Projects</a
+        >
+        <a
+          href="http://localhost:3000/blogs"
+          class="hover:text-orange-400 duration-200"
+          >Blogs</a
+        >
+      </div>
+      <div class="text-center my-7 py-10 text-4xl md:text-5xl">
+        <a href=""><i class="fa-brands fa-github"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+      <p
+        class="font-semibold text-textColorLight text-center mt-10 px-3 md:mt-14"
+      >
+        Copyright &copy 2025 Shazid. All rights reserved.
+      </p>
+    </footer>
+    <script src="/app.js"></script>
+  </body>
+</html>

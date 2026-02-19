@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/output.css" />
+    <title>AI powered websites</title>
+  </head>
+  <body>
+    <!-- Dark theme toggle -->
+    <section>
+      <div class="flex justify-end px-4 pt-3">
+        <div
+          class="switch px-3 py-1 rounded-full space-x-2 max-w-20 bg-stone-100 hover:bg-stone-200 dark:bg-stone-700 dark:border-transparent border border-stone-300 shadow-sm duration-300"
+        >
+          <i class="fa-regular fa-sun dark:text-stone-500 cursor-pointer"></i
+          ><i class="fa-solid fa-moon text-stone-300 cursor-pointer"></i>
+        </div>
+      </div>
+    </section>
+    <!-- Navbar -->
+    <header class="relative z-50">
+      <nav class="container mx-auto">
+        <div class="flex justify-between items-center px-4 py-4">
+          <!-- Logo -->
+          <a href="/" class="text-4xl font-bold md:text-5xl">Shazid</a>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex space-x-6">
+            <a
+              href="#about"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >About</a
+            >
+            <a
+              href="#experience"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >Experience</a
+            >
+            <a
+              href="#projects"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >Projects</a
+            >
+            <a
+              href="/blogs"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >Blog</a
+            >
+            <a
+              href="/contact"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >Contact Me</a
+            >
+          </div>
+
+          <!-- Hamburger Button -->
+          <button id="hamburger" class="md:hidden flex flex-col gap-1.5">
+            <span
+              class="h-1 w-8 bg-textColorDark dark:bg-textOffWhite block transition-all"
+            ></span>
+            <span
+              class="h-1 w-8 bg-textColorDark dark:bg-textOffWhite block transition-all"
+            ></span>
+            <span
+              class="h-1 w-8 bg-textColorDark dark:bg-textOffWhite block transition-all"
+            ></span>
+          </button>
+        </div>
+
+        <!-- MOBILE MENU (ABSOLUTE) -->
+        <div
+          id="mobileMenu"
+          class="absolute left-0 top-full w-full bg-textOffWhite dark:bg-darkBackground shadow-lg py-10 px-6 space-y-6 text-lg text-center font-bold transform scale-y-0 origin-top transition-all duration-300 md:hidden"
+        >
+          <a href="#about" class="block hover:text-orange-400">About</a>
+          <a href="#experience" class="block hover:text-orange-400"
+            >Experience</a
+          >
+          <a href="#projects" class="block hover:text-orange-400">Projects</a>
+          <a href="/blogs" class="block hover:text-orange-400">Blog</a>
+          <a href="/contact" class="block hover:text-orange-400">Contact Me</a>
+        </div>
+      </nav>
+    </header>
+    <main class="max-w-6xl mx-auto">
+      <!-- Hero section -->
+      <section class="p-10 md:p-20">
+        <div class="space-y-4 leading-normal">
+          <h2 class="text-3xl font-semibold md:text-5xl">
+            How AI-Powered Websites Are Helping Small Businesses Get More Leads
+            Without Hiring Extra Staff
+          </h2>
+          <p class="text-xl font-semibold text-textColorLight md:text-2xl">
+            See how intelligent website features help businesses attract,
+            engage, and convert more customers automatically.
+          </p>
+          <div
+            class="flex flex-col justify-between space-y-1 max-w-96 md:flex-row md:items-center"
+          >
+            <img
+              src="/img/profile_pic.jpeg"
+              alt="Blogger Image"
+              class="w-12 rounded-full"
+            />
+            <p class="font-medium text-xl text-textColorLight">15 min read</p>
+            <p class="font-medium text-xl text-textColorLight">June 6, 2025</p>
+          </div>
+        </div>
+      </section>
+      <!-- Key take away section-->
+      <section class="mt-10">
+        <div
+          class="max-w-5xl bg-gray-300 p-10 mx-3 space-y-4 rounded-3xl md:mx-auto md:p-20"
+        >
+          <h2 class="text-3xl font-semibold">Key takeaways</h2>
+          <ul
+            class="list-disc list-inside space-y-2 text-xl font-medium text-textColorLight"
+          >
+            <li>
+              <strong>24/7 intelligent engagement:</strong> AI chatbots and
+              virtual assistants interact with website visitors instantly,
+              capturing leads even when you're sleeping or focusing on other
+              business tasks.
+            </li>
+            <li>
+              <strong>Personalization at scale:</strong> AI analyzes visitor
+              behavior and delivers customized content, recommendations, and
+              messaging to each potential customer automatically.
+            </li>
+            <li>
+              <strong>Qualifying leads automatically:</strong> Smart forms and
+              AI conversations filter out tire-kickers and identify high-quality
+              prospects, saving countless hours of manual screening.
+            </li>
+            <li>
+              <strong>Data-driven optimization:</strong> AI continuously learns
+              from visitor interactions, improving conversion rates and lead
+              quality without requiring constant manual adjustments.
+            </li>
+            <li>
+              <strong>Cost-effective scalability:</strong> Get enterprise-level
+              capabilities at small business prices no need to hire customer
+              service reps, marketing specialists, or sales development
+              representatives.
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Blog Intro -->
+      <section class="p-10 md:p-20">
+        <div class="text-xl font-medium space-y-10">
+          <p>
+            Small business owners wear many hats they're marketers, salespeople,
+            customer service representatives, and everything in between. The
+            challenge of generating quality leads while managing daily
+            operations often feels overwhelming, especially when budget
+            constraints make hiring additional staff unrealistic. Enter
+            AI-powered websites: a game-changing solution that's leveling the
+            playing field for small businesses everywhere.
+          </p>
+
+          <p>
+            Artificial intelligence is no longer science fiction reserved for
+            tech giants with unlimited budgets. Today's AI tools are accessible,
+            affordable, and specifically designed to help small businesses
+            automate lead generation, engage visitors, and convert prospects
+            into customers all without adding to your payroll.
+          </p>
+          <h2>The Small Business Staffing Dilemma</h2>
+
+          <p>
+            Let's be honest: most small businesses can't afford to hire a
+            full-time customer service representative to monitor website
+            inquiries, a marketing specialist to personalize visitor
+            experiences, and a sales development rep to qualify leads. Yet these
+            functions are critical for converting website visitors into paying
+            customers.
+          </p>
+
+          <p>
+            Traditional websites are passive they sit there waiting for visitors
+            to navigate, find information, and hopefully fill out a contact
+            form. Meanwhile, you're juggling inventory, managing operations,
+            serving existing customers, and trying to grow your business. By the
+            time you respond to a website inquiry, the potential customer has
+            often moved on to a competitor who responded faster.
+          </p>
+
+          <p>
+            This is where AI transforms the equation. An AI-powered website
+            actively works for you, engaging visitors in real-time, answering
+            questions instantly, collecting information, and nurturing leads
+            through the sales funnel all without requiring your constant
+            attention or additional staff.
+          </p>
+
+          <h2>AI Chatbots: Your Tireless Front-Line Team</h2>
+
+          <p>
+            AI chatbots have evolved dramatically from the frustrating, robotic
+            early versions that couldn't understand simple questions. Modern AI
+            chatbots use natural language processing to understand context,
+            respond conversationally, and provide genuinely helpful assistance.
+          </p>
+
+          <p>
+            For small businesses, chatbots serve multiple crucial functions:
+          </p>
+
+          <ul class="list-disc list-inside">
+            <li>
+              <strong>Instant response:</strong> Visitors get immediate answers
+              to their questions, dramatically increasing the chances they'll
+              stay engaged rather than bouncing to a competitor's site.
+            </li>
+            <li>
+              <strong>Lead capture:</strong> Chatbots naturally collect contact
+              information during conversations, building your lead database
+              automatically.
+            </li>
+            <li>
+              <strong>Qualification:</strong> Through targeted questions,
+              chatbots can identify serious prospects versus casual browsers,
+              ensuring you spend time on high-quality leads.
+            </li>
+            <li>
+              <strong>Appointment scheduling:</strong> Many AI chatbots
+              integrate with calendar systems, allowing visitors to book
+              consultations or appointments without back-and-forth emails.
+            </li>
+            <li>
+              <strong>After-hours coverage:</strong> Your chatbot never sleeps,
+              capturing leads from international visitors or night owls when
+              you're unavailable.
+            </li>
+          </ul>
+
+          <p>
+            The beauty of AI chatbots is their learning capability. They improve
+            over time by analyzing which responses convert better, which
+            questions visitors ask most frequently, and where conversations
+            typically stall. This continuous optimization happens automatically,
+            without you needing to manually update scripts or hire a specialist.
+          </p>
+
+          <h2>Personalized Experiences That Convert</h2>
+
+          <p>
+            One of the most powerful aspects of AI-powered websites is their
+            ability to personalize the experience for each visitor based on
+            behavior, demographics, referral source, and browsing patterns. This
+            personalization happens in real-time and at scale something that
+            would be impossible for a human team to accomplish manually.
+          </p>
+
+          <p>Here's how AI personalization drives more leads:</p>
+
+          <ul class="list-disc list-inside">
+            <li>
+              <strong>Dynamic content:</strong> AI adjusts homepage messaging,
+              calls-to-action, and featured products based on what's most
+              relevant to each visitor.
+            </li>
+            <li>
+              <strong>Smart recommendations:</strong> Like Netflix suggesting
+              shows you'll enjoy, AI recommends services or products aligned
+              with visitor interests and behavior.
+            </li>
+            <li>
+              <strong>Behavioral triggers:</strong> When a visitor shows signs
+              of leaving (exit-intent), AI can present targeted offers or
+              capture their email before they go.
+            </li>
+            <li>
+              <strong>Segment-specific messaging:</strong> Different messages
+              for first-time visitors, returning customers, or people who came
+              from specific marketing campaigns.
+            </li>
+          </ul>
+
+          <div class="highlight-box">
+            <strong>Real-world example:</strong> A small accounting firm
+            implemented AI personalization on their website. Visitors who came
+            from social media ads about tax services saw tax-focused content and
+            offers, while those searching for bookkeeping services saw different
+            messaging. Their lead conversion rate increased by 43% in the first
+            three months without hiring additional marketing staff.
+          </div>
+
+          <h2>Smart Lead Qualification and Scoring</h2>
+
+          <p>
+            Not all leads are created equal. Small business owners know the
+            frustration of spending time with tire-kickers who have no intention
+            or ability to buy. AI dramatically improves lead quality by
+            implementing intelligent qualification systems.
+          </p>
+
+          <p>
+            AI-powered forms go beyond basic name and email collection. They
+            can:
+          </p>
+
+          <ul class="list-disc list-inside">
+            <li>
+              Ask progressive questions that reveal buying intent and timeline
+            </li>
+            <li>
+              Score leads based on responses, behavior, and engagement level
+            </li>
+            <li>
+              Route high-quality leads to you immediately while nurturing
+              lower-priority prospects automatically
+            </li>
+            <li>Identify decision-makers versus researchers or students</li>
+            <li>Flag leads that match your ideal customer profile</li>
+          </ul>
+
+          <p>
+            This intelligent filtering means you spend your limited time talking
+            to people who are actually ready to buy, rather than answering
+            general inquiries from people who are just browsing. For a small
+            business owner juggling multiple responsibilities, this efficiency
+            is invaluable.
+          </p>
+
+          <h2>Automated Follow-Up and Nurturing</h2>
+
+          <p>
+            Capturing a lead is just the beginning. Research shows that most
+            leads require multiple touchpoints before converting to customers.
+            However, manually following up with every lead is time-consuming and
+            easy to let slip when you're busy running your business.
+          </p>
+
+          <p>
+            AI-powered websites solve this through automated nurturing sequences
+            that feel personal and timely:
+          </p>
+
+          <ul class="list-disc list-inside">
+            <li>
+              <strong>Instant acknowledgment:</strong> Leads receive immediate
+              confirmation and next steps after submitting information
+            </li>
+            <li>
+              <strong>Drip campaigns:</strong> AI triggers educational content,
+              case studies, and offers based on lead behavior and interests
+            </li>
+            <li>
+              <strong>Behavioral emails:</strong> If someone downloads a guide
+              but doesn't schedule a call, AI automatically sends relevant
+              follow-up
+            </li>
+            <li>
+              <strong>Re-engagement:</strong> Cold leads get re-activated
+              through targeted campaigns without manual intervention
+            </li>
+            <li>
+              <strong>Timing optimization:</strong> AI learns the best times to
+              send messages for maximum engagement
+            </li>
+          </ul>
+
+          <p>
+            These automated touchpoints keep your business top-of-mind without
+            requiring you to manually manage email campaigns or remember to
+            follow up with each prospect. The AI handles the repetitive work
+            while you focus on closing deals and serving customers.
+          </p>
+
+          <h2>Predictive Analytics and Optimization</h2>
+
+          <p>
+            Traditional websites require guesswork or expensive consultants to
+            optimize conversion rates. AI-powered websites continuously analyze
+            performance data and make intelligent recommendations or automatic
+            adjustments.
+          </p>
+
+          <p>Here's what AI analytics bring to small businesses:</p>
+
+          <ul class="list-disc list-inside">
+            <li>
+              <strong>Conversion bottlenecks:</strong> AI identifies exactly
+              where visitors drop off and suggests improvements
+            </li>
+            <li>
+              <strong>A/B testing automation:</strong> Different headlines,
+              images, and calls-to-action are tested automatically to find what
+              converts best
+            </li>
+            <li>
+              <strong>Traffic pattern insights:</strong> Understanding when your
+              best leads visit helps optimize chatbot availability and content
+              scheduling
+            </li>
+            <li>
+              <strong>Predictive lead scoring:</strong> AI predicts which leads
+              are most likely to convert based on historical data
+            </li>
+            <li>
+              <strong>ROI tracking:</strong> Clear visibility into which AI
+              features generate the most valuable leads
+            </li>
+          </ul>
+
+          <p>
+            This data-driven approach means your website continuously improves
+            without requiring you to become a marketing expert or hire an
+            analytics team.
+          </p>
+
+          <h2>Voice and Visual AI Integration</h2>
+
+          <p>
+            The latest AI capabilities extend beyond text-based interactions.
+            Voice AI and visual recognition are opening new lead generation
+            possibilities:
+          </p>
+
+          <ul class="list-disc list-inside">
+            <li>
+              <strong>Voice search optimization:</strong> AI helps your website
+              content match how people actually speak queries to devices like
+              Alexa or Google
+            </li>
+            <li>
+              <strong>Voice-enabled chat:</strong> Some visitors prefer speaking
+              their questions rather than typing
+            </li>
+            <li>
+              <strong>Image recognition:</strong> For businesses like
+              contractors or designers, AI can analyze uploaded photos and
+              provide instant quotes or recommendations
+            </li>
+            <li>
+              <strong>Video analysis:</strong> AI can analyze user-generated
+              video content to better understand needs and provide personalized
+              responses
+            </li>
+          </ul>
+
+          <p>
+            These advanced features, once available only to large enterprises,
+            are now accessible to small businesses through affordable AI
+            platforms.
+          </p>
+
+          <h2>Real ROI: The Numbers That Matter</h2>
+
+          <p>
+            Let's talk about the bottom line. Implementing AI on your website
+            requires investment, but it's dramatically cheaper than hiring
+            staff. Consider these typical costs:
+          </p>
+
+          <ul class="list-disc list-inside">
+            <li>
+              Full-time customer service rep: $30,000-$45,000 annually plus
+              benefits
+            </li>
+            <li>
+              Marketing specialist: $40,000-$60,000 annually plus benefits
+            </li>
+            <li>
+              Sales development rep: $35,000-$55,000 annually plus benefits
+            </li>
+            <li>
+              AI-powered website tools: $50-$500 monthly depending on features
+              and scale
+            </li>
+          </ul>
+
+          <p>
+            Beyond cost savings, AI delivers measurable improvements in lead
+            generation metrics. Small businesses implementing AI-powered
+            websites typically see improvements such as increased website
+            conversion rates, higher lead quality scores, faster response times
+            leading to more closed deals, better visitor engagement metrics, and
+            reduced time spent on lead qualification.
+          </p>
+
+          <div class="highlight-box">
+            <strong>Success story:</strong> A small home services company added
+            AI chat and smart forms to their website. In six months, they
+            captured 67% more qualified leads, reduced their response time from
+            hours to seconds, and closed 31% more deals all without hiring
+            additional sales or support staff. The AI tools cost them $199 per
+            month versus the $50,000+ it would cost to hire someone.
+          </div>
+
+          <h2>Getting Started: Practical Steps for Implementation</h2>
+
+          <p>
+            Implementing AI on your website doesn't require technical expertise
+            or a massive budget. Here's how to start:
+          </p>
+
+          <ul class="list-disc list-inside">
+            <li>
+              <strong>Start with chatbots:</strong> This is the easiest entry
+              point. Many platforms offer simple setup with pre-built templates
+              for different industries.
+            </li>
+            <li>
+              <strong>Optimize your forms:</strong> Replace static contact forms
+              with AI-powered smart forms that adapt questions based on
+              responses.
+            </li>
+            <li>
+              <strong>Add personalization:</strong> Begin with simple
+              personalization like location-based content, then expand to
+              behavioral triggers.
+            </li>
+            <li>
+              <strong>Implement lead scoring:</strong> Set up basic scoring
+              rules that AI can refine over time based on which leads actually
+              convert.
+            </li>
+            <li>
+              <strong>Connect to your CRM:</strong> Ensure AI-captured leads
+              flow directly into your customer relationship management system.
+            </li>
+            <li>
+              <strong>Monitor and adjust:</strong> Review AI performance monthly
+              and adjust settings to improve results.
+            </li>
+          </ul>
+
+          <p>
+            Many AI platforms offer free trials or freemium tiers, allowing you
+            to test functionality before committing financially. Start small,
+            measure results, and expand AI capabilities as you see ROI.
+          </p>
+
+          <h2>The Future Is Already Here</h2>
+
+          <p>
+            AI-powered websites aren't futuristic technology they're proven
+            tools that small businesses are using right now to compete with
+            larger competitors and grow without proportionally increasing
+            overhead. As AI technology continues advancing, these capabilities
+            will only become more powerful and accessible.
+          </p>
+
+          <p>
+            The small businesses that embrace AI website tools today position
+            themselves ahead of competitors still relying on passive websites
+            and manual lead management. Every day without these tools represents
+            missed opportunities leads that go uncaptured, questions that go
+            unanswered, and prospects who choose faster-responding competitors.
+          </p>
+
+          <p>
+            The question isn't whether to implement AI on your website, but
+            rather how quickly you can start benefiting from these powerful lead
+            generation capabilities. Your competitors are already exploring
+            these tools. The businesses that adapt fastest will capture the most
+            market share.
+          </p>
+
+          <div class="space-y-3">
+            <h2 class="text-3xl font-semibold">Conclusion</h2>
+            <p>
+              AI-powered websites represent a revolutionary solution for small
+              businesses struggling to generate quality leads without the budget
+              to hire additional staff. Through intelligent chatbots that engage
+              visitors 24/7, personalization engines that customize experiences
+              at scale, and smart qualification systems that identify serious
+              prospects, AI automates functions that traditionally required
+              multiple full-time employees.
+            </p>
+
+            <p>
+              These technologies deliver tangible results: higher conversion
+              rates, better lead quality, faster response times, and improved
+              customer engagement all at a fraction of the cost of hiring staff.
+              AI chatbots provide instant responses and capture lead information
+              naturally through conversation. Personalization engines ensure
+              each visitor sees content relevant to their interests and needs.
+              Automated nurturing sequences maintain engagement without manual
+              follow-up. Predictive analytics continuously optimize performance
+              without requiring marketing expertise.
+            </p>
+
+            <p>
+              The ROI is compelling: AI tools typically cost $50-$500 monthly
+              compared to $30,000-$60,000 annually for equivalent human staff,
+              while often delivering superior consistency and availability.
+              Small businesses implementing AI-powered websites see measurable
+              improvements in lead generation within months. As AI technology
+              becomes increasingly accessible and affordable, early adopters
+              gain competitive advantages that compound over time. For small
+              businesses looking to scale lead generation without scaling
+              headcount, AI-powered websites aren't just helpful they're
+              essential for sustainable growth in today's digital marketplace.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+     <!-- Blog suggestions -->
+     <section class="space-y-1 md:space-y-6">
+      <h2 class="text-4xl text-center font-bold md:text-5xl">Related Blogs</h2>
+      <div
+        class="flex flex-col py-10 max-w-6xl mx-5 gap-5 md:gap-2 md:py-3 lg:mx-auto lg:flex-row items-stretch"
+      >
+        <!-- Card#1 -->
+        <a href="/blogs/maintain-your-website" class="flex-1">
+          <div
+            class="flex flex-col-reverse bg-white dark:bg-stone-700 gap-2 shadow rounded-3xl h-full min-h-[260px] md:flex-row md:gap-6"
+          >
+            <!-- Text -->
+            <div class="space-y-6 px-3 py-4 flex-1">
+              <p
+                class="text-xs font-bold text-blue-700 bg-blue-200 w-40 text-center px-1 rounded-full"
+              >
+                MAINTAINING WEBSITES
+              </p>
+              <h2 class="text-xl font-semibold">
+                How To Maintain Your Website With These Easy Steps
+              </h2>
+              <div
+                class="font-semibold dark:text-stone-400 text-textColorLight"
+              >
+                <p>15 min</p>
+                <p>June 6, 2025</p>
+              </div>
+            </div>
+
+            <!-- Image -->
+            <div class="w-36 p-3 flex-shrink-0">
+              <img
+              src="../img/learnReact.jpg"
+                alt=""
+                class="w-full rounded-3xl"
+              />
+            </div>
+          </div>
+        </a>
+        <!-- Card#2-->
+        <a href="/blogs/mordern-websites" class="flex-1">
+          <div
+            class="flex flex-col-reverse bg-white dark:bg-stone-700 gap-2 shadow rounded-3xl h-full min-h-[260px] md:flex-row md:gap-6"
+          >
+            <!-- Text -->
+            <div class="space-y-6 px-3 py-4 flex-1">
+              <p
+                class="text-xs font-bold text-blue-700 bg-blue-200 w-40 text-center px-1 rounded-full"
+              >
+		MORDERN WEB APPS
+              </p>
+              <h2 class="text-xl font-semibold">
+                  Why Every Small Business Needs a Clean, Modern Website
+              </h2>
+              <div
+                class="font-semibold text-textColorLight dark:text-stone-400"
+              >
+                  <p>15 min</p>
+                  <p>September 14, 2025</p>
+              </div>
+            </div>
+
+            <!-- Image -->
+            <div class="w-36 p-3 flex-shrink-0">
+              <img
+                  src="../img/cleanWebsite.jpg"
+                alt=""
+                class="w-full rounded-3xl"
+              />
+            </div>
+          </div>
+        </a>
+        <!-- Card#3 -->
+        <a href="/blogs/effective-seo-tips" class="flex-1">
+          <div
+            class="flex flex-col-reverse bg-white dark:bg-stone-700 gap-2 shadow rounded-3xl h-full min-h-[260px] md:flex-row md:gap-6"
+          >
+            <!-- Text -->
+            <div class="space-y-6 px-3 py-4 flex-1">
+              <p
+                class="text-xs font-bold text-blue-700 bg-blue-200 w-40 text-center rounded-full"
+              >
+                INCREASE ONLINE SALES
+              </p>
+              <h2 class="text-xl font-semibold">
+                7 effective SEO tips to grow your business's local exposure for
+                better visibility
+              </h2>
+              <div
+                class="font-semibold text-textColorLight dark:text-stone-400"
+              >
+                <p>10 min read</p>
+                <p>April 8, 2025</p>
+              </div>
+            </div>
+
+            <!-- Image -->
+            <div class="w-36 p-3 flex-shrink-0">
+              <img src="../img/seo.jpg" alt="" class="w-full rounded-3xl" />
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="mb-7 mt-16 mb:mt-20">
+      <div
+        class="text-center grid grid-cols-2 md:space-x-10 gap-y-3 md:block text-2xl font-medium"
+      >
+        <a href="#about" class="hover:text-orange-400 duration-200">About</a>
+        <a href="#experience" class="hover:text-orange-400 duration-200"
+          >Experience</a
+        >
+        <a href="#projects" class="hover:text-orange-400 duration-200"
+          >Projects</a
+        >
+        <a
+          href="http://localhost:3000/blogs"
+          class="hover:text-orange-400 duration-200"
+          >Blogs</a
+        >
+      </div>
+      <div class="text-center my-7 py-10 text-4xl md:text-5xl">
+        <a href=""><i class="fa-brands fa-github"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+      <p
+        class="font-semibold text-textColorLight text-center mt-10 px-3 md:mt-14"
+      >
+        Copyright &copy 2025 Shazid. All rights reserved.
+      </p>
+    </footer>
+    <script src="/app.js"></script>
+  </body>
+</html>

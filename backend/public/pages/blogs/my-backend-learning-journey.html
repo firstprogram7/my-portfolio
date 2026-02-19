@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/output.css" />
+    <title>My backend learning journey</title>
+  </head>
+  <body>
+    <!-- Dark theme toggle -->
+    <section>
+      <div class="flex justify-end px-4 pt-3">
+        <div
+          class="switch px-3 py-1 rounded-full space-x-2 max-w-20 bg-stone-100 hover:bg-stone-200 dark:bg-stone-700 dark:border-transparent border border-stone-300 shadow-sm duration-300"
+        >
+          <i class="fa-regular fa-sun dark:text-stone-500 cursor-pointer"></i
+          ><i class="fa-solid fa-moon text-stone-300 cursor-pointer"></i>
+        </div>
+      </div>
+    </section>
+    <!-- Navbar -->
+    <header class="relative z-50">
+      <nav class="container mx-auto">
+        <div class="flex justify-between items-center px-4 py-4">
+          <!-- Logo -->
+          <a href="/" class="text-4xl font-bold md:text-5xl">Shazid</a>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex space-x-6">
+            <a
+              href="#about"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >About</a
+            >
+            <a
+              href="#experience"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >Experience</a
+            >
+            <a
+              href="#projects"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >Projects</a
+            >
+            <a
+              href="/blogs"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >Blog</a
+            >
+            <a
+              href="/contact"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >Contact Me</a
+            >
+          </div>
+
+          <!-- Hamburger Button -->
+          <button id="hamburger" class="md:hidden flex flex-col gap-1.5">
+            <span
+              class="h-1 w-8 bg-textColorDark dark:bg-textOffWhite block transition-all"
+            ></span>
+            <span
+              class="h-1 w-8 bg-textColorDark dark:bg-textOffWhite block transition-all"
+            ></span>
+            <span
+              class="h-1 w-8 bg-textColorDark dark:bg-textOffWhite block transition-all"
+            ></span>
+          </button>
+        </div>
+
+        <!-- MOBILE MENU (ABSOLUTE) -->
+        <div
+          id="mobileMenu"
+          class="absolute left-0 top-full w-full bg-textOffWhite dark:bg-darkBackground shadow-lg py-10 px-6 space-y-6 text-lg text-center font-bold transform scale-y-0 origin-top transition-all duration-300 md:hidden"
+        >
+          <a href="#about" class="block hover:text-orange-400">About</a>
+          <a href="#experience" class="block hover:text-orange-400"
+            >Experience</a
+          >
+          <a href="#projects" class="block hover:text-orange-400">Projects</a>
+          <a href="/blogs" class="block hover:text-orange-400">Blog</a>
+          <a href="/contact" class="block hover:text-orange-400">Contact Me</a>
+        </div>
+      </nav>
+    </header>
+    <main class="max-w-6xl mx-auto">
+      <!-- Hero section -->
+      <section class="p-20">
+        <div class="space-y-4 leading-normal">
+          <h2 class="text-3xl font-semibold md:text-5xl">
+            My Journey Learning Backend Development and Connecting It with the
+            Frontend
+          </h2>
+          <p class="text-xl font-semibold text-textColorLight md:text-2xl">
+            From Learning Backend Development to Building Full-Stack
+            Applications
+          </p>
+          <div
+            class="flex flex-col justify-between space-y-1 max-w-96 md:flex-row md:items-center"
+          >
+            <img
+              src="/img/profile_pic.jpeg"
+              alt="Blogger Image"
+              class="w-12 rounded-full"
+            />
+            <p class="font-medium text-xl text-textColorLight">15 min read</p>
+            <p class="font-medium text-xl text-textColorLight">June 6, 2025</p>
+          </div>
+        </div>
+      </section>
+      <!-- Key take away section-->
+      <section class="mt-10">
+        <div
+          class="max-w-5xl bg-gray-300 p-20 mx-3 space-y-4 rounded-3xl md:mx-auto"
+        >
+          <h2 class="text-3xl font-semibold">Key takeaways</h2>
+          <ul
+            class="list-disc list-inside space-y-2 text-xl font-medium text-textColorLight"
+          >
+            <li>
+              <strong>Start with fundamentals:</strong> Understanding HTTP,
+              APIs, and databases creates a solid foundation before diving into
+              specific frameworks or languages.
+            </li>
+            <li>
+              <strong>Build projects immediately:</strong> Theory alone won't
+              make you a backend developer—hands-on projects cement your
+              understanding and reveal real-world challenges.
+            </li>
+            <li>
+              <strong>Master the request-response cycle:</strong> Understanding
+              how frontend and backend communicate is the key to building
+              seamless full-stack applications.
+            </li>
+            <li>
+              <strong>Choose your stack wisely:</strong> Start with one backend
+              language and framework, master it, then expand—trying to learn
+              everything at once leads to confusion.
+            </li>
+            <li>
+              <strong>Integration is an art:</strong> Connecting frontend and
+              backend requires understanding state management, error handling,
+              authentication, and performance optimization.
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Blog Intro -->
+      <section class="p-20">
+        <div class="text-xl font-medium space-y-10">
+          <p>
+            My journey from frontend developer to full-stack engineer wasn't a
+            straight path, but it was one of the most rewarding learning
+            experiences of my career. Like many developers, I started with HTML,
+            CSS, and JavaScript, creating beautiful interfaces without
+            understanding the magic happening behind the scenes. The moment I
+            decided to dive into backend development, everything changed.
+            Suddenly, I could build complete applications, understand how data
+            flows, and create solutions that were more than just pretty
+            faces—they were functional, powerful tools.
+          </p>
+          <h2>The Awakening: Why I Needed Backend Skills</h2>
+
+          <p>
+            My frontend skills were solid. I could create responsive layouts,
+            implement complex animations, and build interactive user interfaces.
+            But I hit a wall when I wanted to save user data, authenticate
+            users, or fetch dynamic content. I was dependent on others to create
+            APIs for me, and I couldn't fully understand or troubleshoot issues
+            when they arose.
+          </p>
+
+          <p>
+            This dependency frustrated me. I wanted to be self-sufficient, to
+            understand the complete picture of web development. More
+            importantly, I wanted to turn my ideas into reality without waiting
+            for backend developers to become available. That's when I made the
+            decision to learn backend development seriously.
+          </p>
+
+          <p>
+            The transition wasn't easy. Backend development requires a different
+            mindset—you're thinking about data structures, security,
+            scalability, and server architecture rather than pixels and user
+            experience. But this complementary skill set made me a much more
+            valuable and versatile developer.
+          </p>
+
+          <h2>My Learning Path: From Zero to Functional</h2>
+
+          <p>
+            I didn't follow a traditional computer science curriculum, but I
+            created a structured learning path that worked for me. Here's how I
+            approached it:
+          </p>
+
+          <h2>Step 1: Understanding the Fundamentals</h2>
+
+          <p>
+            Before touching any backend framework, I spent time understanding
+            core concepts that apply across all backend technologies. This
+            foundation proved invaluable later:
+          </p>
+
+          <ul class="list-disc list-inside">
+            <li>
+              <strong>HTTP and how the web works:</strong> I learned about
+              requests, responses, status codes, headers, and how browsers
+              communicate with servers. Understanding GET, POST, PUT, DELETE
+              requests was crucial.
+            </li>
+            <li>
+              <strong>What APIs actually are:</strong> REST APIs, JSON,
+              endpoints—these weren't just buzzwords anymore. I understood why
+              we structure APIs certain ways and how they serve as contracts
+              between frontend and backend.
+            </li>
+            <li>
+              <strong>Database basics:</strong> I learned about relational
+              databases (SQL) and NoSQL databases, understanding when to use
+              each and how to structure data efficiently.
+            </li>
+            <li>
+              <strong>Authentication and security:</strong> Sessions, tokens,
+              JWT, password hashing—security couldn't be an afterthought.
+            </li>
+          </ul>
+
+          <p>
+            I spent about two weeks just reading, watching videos, and building
+            mental models. This wasn't wasted time—it was an investment that
+            made everything else make sense.
+          </p>
+
+          <h2>Step 2: Choosing My Backend Stack</h2>
+
+          <p>
+            The backend world offers many choices: Node.js, Python with Django
+            or Flask, Ruby on Rails, PHP with Laravel, Java with Spring Boot,
+            Go, and more. The abundance of options paralyzed me initially.
+          </p>
+
+          <p>
+            I chose Node.js with Express for several reasons. Since I already
+            knew JavaScript from frontend development, the syntax was familiar.
+            I could use the same language for both frontend and backend, which
+            reduced the cognitive load. Node.js also has a massive ecosystem and
+            excellent community support.
+          </p>
+
+          <p>
+            Looking back, the specific technology mattered less than committing
+            to one and mastering it. You can always learn additional languages
+            and frameworks later—what matters is understanding backend
+            principles, which transfer across technologies.
+          </p>
+
+          <h2>Step 3: Building My First Backend Application</h2>
+
+          <p>
+            Theory only takes you so far. I needed to get my hands dirty. My
+            first backend project was a simple task management API. Nothing
+            fancy, but it covered all the essentials:
+          </p>
+
+          <ul class="list-disc list-inside">
+            <li>Setting up a server and handling routes</li>
+            <li>Connecting to a MongoDB database</li>
+            <li>Implementing CRUD operations (Create, Read, Update, Delete)</li>
+            <li>Adding basic authentication</li>
+            <li>Handling errors properly</li>
+            <li>Writing middleware functions</li>
+          </ul>
+
+          <p>
+            This project taught me more in one week than a month of watching
+            tutorials. I encountered real errors, struggled with database
+            connections, dealt with CORS issues, and slowly figured things out.
+            Each problem I solved built my confidence.
+          </p>
+
+          <h2>The Bridge: Connecting Frontend and Backend</h2>
+
+          <p>
+            Having built both frontend interfaces and backend APIs separately,
+            the next challenge was connecting them. This is where many
+            developers struggle, and where I initially made mistakes. Here's
+            what I learned about effective frontend-backend integration:
+          </p>
+
+          <h2>Understanding the Request-Response Cycle</h2>
+
+          <p>
+            Everything clicked when I truly understood the request-response
+            cycle. The frontend sends a request with specific data and headers.
+            The backend processes this request, interacts with the database if
+            needed, performs business logic, and sends back a response. The
+            frontend then handles this response and updates the UI accordingly.
+          </p>
+
+          <div class="code-concept">
+            Frontend: "Hey backend, give me all users" (GET request)<br />
+            Backend: Queries database, processes data, returns JSON<br />
+            Frontend: Receives data, updates state, renders UI
+          </div>
+
+          <p>
+            Sounds simple, but implementing this smoothly requires handling
+            loading states, errors, authentication tokens, and data
+            transformation. I learned to think in terms of asynchronous
+            operations and state management.
+          </p>
+
+          <h2>Implementing API Communication</h2>
+
+          <p>
+            On the frontend, I use the Fetch API or Axios to communicate with my
+            backend. I learned to create reusable API service files that
+            centralize all backend communication. This approach keeps my code
+            organized and makes changes easier:
+          </p>
+
+          <ul class="list-disc list-inside">
+            <li>
+              <strong>Centralized API configuration:</strong> Base URLs, default
+              headers, and timeout settings in one place
+            </li>
+            <li>
+              <strong>Error handling:</strong> Interceptors that handle common
+              errors like authentication failures or network issues
+            </li>
+            <li>
+              <strong>Request/response transformation:</strong> Converting data
+              formats between frontend and backend expectations
+            </li>
+            <li>
+              <strong>Loading and error states:</strong> Proper user feedback
+              during API calls
+            </li>
+          </ul>
+
+          <p>
+            I also learned the importance of environment variables for storing
+            API endpoints. In development, my frontend talks to localhost. In
+            production, it communicates with the deployed backend—all managed
+            through environment configuration.
+          </p>
+
+          <h2>Authentication and Authorization</h2>
+
+          <p>
+            One of the trickiest aspects of frontend-backend integration is
+            handling authentication securely. I implemented JWT (JSON Web
+            Tokens) authentication, which taught me valuable lessons:
+          </p>
+
+          <ul class="list-disc list-inside">
+            <li>
+              How to securely store tokens on the frontend (httpOnly cookies vs
+              localStorage trade-offs)
+            </li>
+            <li>How to include authentication tokens in API requests</li>
+            <li>How to handle token expiration and refresh tokens</li>
+            <li>How to protect routes on both frontend and backend</li>
+            <li>
+              How to handle authorization (what authenticated users can access)
+            </li>
+          </ul>
+
+          <p>
+            I made mistakes here—my first implementation stored tokens
+            insecurely and didn't handle expiration properly. Through research,
+            code reviews, and security best practices, I refined my approach.
+          </p>
+
+          <h2>Managing Application State</h2>
+
+          <p>
+            As my applications grew more complex, I realized that effective
+            state management was crucial for smooth frontend-backend
+            integration. I needed to track loading states, cache data
+            efficiently, handle errors gracefully, and keep the UI in sync with
+            backend data.
+          </p>
+
+          <p>
+            I experimented with various state management solutions—from simple
+            React Context to more robust solutions like Redux or Zustand. The
+            key insight was that state management isn't just about storing
+            data—it's about creating a predictable flow of data through your
+            application.
+          </p>
+
+          <p>
+            I learned to distinguish between different types of state: server
+            state (data from the backend), UI state (modals, form inputs), and
+            application state (user preferences, theme). Tools like React Query
+            revolutionized how I handle server state, automatically managing
+            caching, refetching, and synchronization.
+          </p>
+
+          <h2>Real-World Integration Challenges I Faced</h2>
+
+          <p>
+            Theory is one thing, but implementing frontend-backend integration
+            in real projects presented challenges I didn't anticipate:
+          </p>
+
+          <h2>CORS (Cross-Origin Resource Sharing)</h2>
+
+          <p>
+            My first deployed application immediately broke due to CORS errors.
+            I learned that browsers block requests between different origins for
+            security reasons. Understanding CORS taught me about web security
+            and how to properly configure backend servers to accept requests
+            from specific frontend origins.
+          </p>
+
+          <h2>Data Transformation and Validation</h2>
+
+          <p>
+            The backend sends data in one format, but the frontend often needs
+            it in another. I learned to create transformation layers that
+            convert backend responses into frontend-friendly structures.
+            Similarly, user input from the frontend needs validation and
+            formatting before sending to the backend.
+          </p>
+
+          <p>
+            I implemented validation on both sides—frontend validation for
+            immediate user feedback and backend validation for security (never
+            trust client-side validation alone).
+          </p>
+
+          <h2>Error Handling and User Feedback</h2>
+
+          <p>
+            When an API call fails, the user needs to know what happened. I
+            developed patterns for handling different error scenarios: network
+            errors, validation errors, authentication failures, and server
+            errors. Each requires different user feedback and recovery options.
+          </p>
+
+          <p>
+            I learned to implement retry logic for transient failures, show
+            meaningful error messages instead of technical jargon, and provide
+            actionable steps when errors occur.
+          </p>
+
+          <h2>Performance and Optimization</h2>
+
+          <p>
+            As my applications handled more data and users, performance became
+            critical. I learned optimization techniques that span both frontend
+            and backend:
+          </p>
+
+          <ul class="list-disc list-inside">
+            <li>
+              <strong>Pagination and lazy loading:</strong> Loading data in
+              chunks rather than all at once
+            </li>
+            <li>
+              <strong>Debouncing and throttling:</strong> Reducing unnecessary
+              API calls from user interactions
+            </li>
+            <li>
+              <strong>Caching strategies:</strong> Storing frequently accessed
+              data to reduce server load
+            </li>
+            <li>
+              <strong>Optimistic updates:</strong> Updating the UI immediately
+              while the request processes in the background
+            </li>
+            <li>
+              <strong>Compression:</strong> Reducing payload sizes for faster
+              transfers
+            </li>
+          </ul>
+
+          <h2>Building a Complete Full-Stack Application</h2>
+
+          <p>
+            The culmination of my learning was building a complete full-stack
+            application—a social platform where users could create profiles,
+            post content, comment, and interact. This project required me to
+            implement:
+          </p>
+
+          <ul class="list-disc list-inside">
+            <li>
+              User authentication and authorization with different user roles
+            </li>
+            <li>Real-time features using WebSockets for instant updates</li>
+            <li>File uploads for user avatars and media content</li>
+            <li>
+              Complex database relationships between users, posts, and comments
+            </li>
+            <li>Search functionality with efficient database queries</li>
+            <li>Email notifications for user actions</li>
+            <li>Responsive frontend that works seamlessly with the backend</li>
+          </ul>
+
+          <p>
+            This project was challenging but incredibly rewarding. It showed me
+            that I could build complete, professional applications from scratch.
+            I understood the entire stack, from database design to UI
+            interactions.
+          </p>
+
+          <h2>Key Lessons and Best Practices</h2>
+
+          <p>
+            Through my journey, I developed several principles that guide my
+            full-stack development:
+          </p>
+
+          <ul class="list-disc list-inside">
+            <li>
+              <strong>API-first design:</strong> Design your API contracts
+              before implementing frontend or backend. This creates a clear
+              interface and prevents miscommunication.
+            </li>
+            <li>
+              <strong>Separation of concerns:</strong> Keep frontend and backend
+              code separate. The frontend should be presentational, the backend
+              should handle business logic.
+            </li>
+            <li>
+              <strong>Version control everything:</strong> Use Git from day one,
+              with separate repositories for frontend and backend if needed.
+            </li>
+            <li>
+              <strong>Document your APIs:</strong> Use tools like Swagger or
+              Postman to document endpoints, making frontend integration easier.
+            </li>
+            <li>
+              <strong>Test both layers:</strong> Write tests for both frontend
+              components and backend endpoints.
+            </li>
+            <li>
+              <strong>Security is paramount:</strong> Never expose sensitive
+              data, always validate input, use HTTPS, and follow security best
+              practices.
+            </li>
+            <li>
+              <strong>Think about deployment early:</strong> Understanding how
+              to deploy both frontend and backend saves headaches later.
+            </li>
+          </ul>
+
+          <h2>Continuous Learning and Growth</h2>
+
+          <p>
+            Learning backend development and mastering frontend-backend
+            integration isn't a destination—it's an ongoing journey.
+            Technologies evolve, best practices change, and new patterns emerge.
+            I continue to learn by building projects, reading documentation,
+            following industry experts, and reviewing others' code.
+          </p>
+
+          <p>
+            Some areas I'm currently exploring include microservices
+            architecture, GraphQL as an alternative to REST, serverless
+            functions, containerization with Docker, and advanced performance
+            optimization techniques. Each new concept builds on the foundation I
+            established.
+          </p>
+
+          <div class="space-y-3">
+            <h2 class="text-3xl font-semibold">Conclusion</h2>
+            <p>
+              Learning backend development transformed me from a frontend
+              specialist into a capable full-stack developer. The journey
+              started with understanding fundamental concepts like HTTP, APIs,
+              and databases before choosing a specific backend technology stack.
+              Through hands-on projects, I learned to build functional backend
+              applications with proper architecture, security, and error
+              handling.
+            </p>
+
+            <p>
+              The real skill came in connecting frontend and backend seamlessly.
+              This required mastering the request-response cycle, implementing
+              secure authentication, managing application state effectively, and
+              handling real-world challenges like CORS, data transformation, and
+              performance optimization. Each project taught valuable lessons
+              about API design, error handling, and user experience.
+            </p>
+
+            <p>
+              The key to successful full-stack development is understanding that
+              frontend and backend aren't separate entities—they're two halves
+              of a complete application. Effective integration requires careful
+              planning, clear API contracts, proper state management, and
+              attention to security and performance. For developers looking to
+              expand their skills, learning backend development opens up a world
+              of possibilities and makes you a more complete, self-sufficient
+              developer capable of bringing ideas to life independently.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Blog suggestions -->
+    <section class="space-y-1 md:space-y-6">
+      <h2 class="text-4xl text-center font-bold md:text-5xl">Related Blogs</h2>
+      <div
+        class="flex flex-col py-10 max-w-6xl mx-5 gap-5 md:gap-2 md:py-3 lg:mx-auto lg:flex-row items-stretch"
+      >
+        <!-- Card#1 -->
+        <a href="/blogs/effective-seo-tips" class="flex-1">
+          <div
+            class="flex flex-col-reverse bg-white dark:bg-stone-700 gap-2 shadow rounded-3xl h-full min-h-[260px] md:flex-row md:gap-6"
+          >
+            <!-- Text -->
+            <div class="space-y-6 px-3 py-4 flex-1">
+              <p
+                class="text-xs font-bold text-blue-700 bg-blue-200 w-40 text-center px-1 rounded-full"
+              >
+                INCREASE ONLINE SALES
+              </p>
+              <h2 class="text-xl font-semibold">
+                7 effective SEO tips to grow your business's local exposure for
+                better visibility
+              </h2>
+              <div
+                class="font-semibold dark:text-stone-400 text-textColorLight"
+              >
+                <p>10 min read</p>
+                <p>April 8, 2025</p>
+              </div>
+            </div>
+
+            <!-- Image -->
+            <div class="w-36 p-3 flex-shrink-0">
+              <img src="../img/seo.jpg" alt="" class="w-full rounded-3xl" />
+            </div>
+          </div>
+        </a>
+        <!-- Card#2-->
+        <a href="/blogs/motivation-in-learning" class="flex-1">
+          <div
+            class="flex flex-col-reverse bg-white dark:bg-stone-700 gap-2 shadow rounded-3xl h-full min-h-[260px] md:flex-row md:gap-6"
+          >
+            <!-- Text -->
+            <div class="space-y-6 px-3 py-4 flex-1">
+              <p
+                class="text-xs font-bold text-blue-700 bg-blue-200 w-40 text-center px-1 rounded-full"
+              >
+                STAYING MOTIVATED
+              </p>
+              <h2 class="text-xl font-semibold">
+                How I Stay Motivated Learning New Technologies and Applying Them
+                Effectively Daily
+              </h2>
+              <div
+                class="font-semibold text-textColorLight dark:text-stone-400"
+              >
+                <p>15 min read</p>
+                <p>July 6, 2025</p>
+              </div>
+            </div>
+
+            <!-- Image -->
+            <div class="w-36 p-3 flex-shrink-0">
+              <img
+                src="../img/dailyWork.jpg"
+                alt=""
+                class="w-full rounded-3xl"
+              />
+            </div>
+          </div>
+        </a>
+        <!-- Card#3 -->
+        <a href="/blogs/my-react-learning-journey" class="flex-1">
+          <div
+            class="flex flex-col-reverse bg-white dark:bg-stone-700 gap-2 shadow rounded-3xl h-full min-h-[260px] md:flex-row md:gap-6"
+          >
+            <!-- Text -->
+            <div class="space-y-6 px-3 py-4 flex-1">
+              <p
+                class="text-xs font-bold text-blue-700 bg-blue-200 w-40 text-center rounded-full"
+              >
+                LEARNED REACT
+              </p>
+              <h2 class="text-xl font-semibold">
+                How I Finally Learned React After Initially Struggling Through
+                Many Confusing Concepts
+              </h2>
+              <div
+                class="font-semibold text-textColorLight dark:text-stone-400"
+              >
+                <p>12 min read</p>
+                <p>August 13, 2025</p>
+              </div>
+            </div>
+
+            <!-- Image -->
+            <div class="w-36 p-3 flex-shrink-0">
+              <img
+                src="../img/learnReact1.jpg"
+                alt=""
+                class="w-full rounded-3xl"
+              />
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="mb-7 mt-16 mb:mt-20">
+      <div
+        class="text-center grid grid-cols-2 md:space-x-10 gap-y-3 md:block text-2xl font-medium"
+      >
+        <a href="#about" class="hover:text-orange-400 duration-200">About</a>
+        <a href="#experience" class="hover:text-orange-400 duration-200"
+          >Experience</a
+        >
+        <a href="#projects" class="hover:text-orange-400 duration-200"
+          >Projects</a
+        >
+        <a
+          href="http://localhost:3000/blogs"
+          class="hover:text-orange-400 duration-200"
+          >Blogs</a
+        >
+      </div>
+      <div class="text-center my-7 py-10 text-4xl md:text-5xl">
+        <a href=""><i class="fa-brands fa-github"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+      <p
+        class="font-semibold text-textColorLight text-center mt-10 px-3 md:mt-14"
+      >
+        Copyright &copy 2025 Shazid. All rights reserved.
+      </p>
+    </footer>
+    <script src="/app.js"></script>
+  </body>
+</html>
