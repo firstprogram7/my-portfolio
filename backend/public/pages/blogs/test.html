@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Experience — Dev Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Mono:wght@300;400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    html {
+      background: #f0efec;
+      color: #303030;
+      transition: 0.3s ease;
+    }
+    html.dark {
+      background: #252525;
+      color: #f0efec;
+      transition: 0.3s ease;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: 'Instrument Sans', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .font-display { font-family: 'Playfair Display', serif; }
+    .font-mono { font-family: 'DM Mono', monospace; }
+
+    /* Grain overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.4;
+    }
+
+    /* Theme toggle */
+    .theme-toggle {
+      position: fixed;
+      top: 2rem;
+      right: 2rem;
+      z-index: 1000;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1.5px solid currentColor;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: transparent;
+    }
+    .theme-toggle:hover { transform: rotate(180deg); }
+
+    /* Section header */
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: 0.5;
+    }
+
+    /* Experience card */
+    .exp-card {
+      position: relative;
+      border-top: 1px solid currentColor;
+      padding: 2.5rem 0;
+      cursor: default;
+      overflow: hidden;
+    }
+    .exp-card::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0;
+      width: 0; height: 100%;
+      background: #303030;
+      transition: width 0.5s cubic-bezier(0.77,0,0.175,1);
+      z-index: 0;
+    }
+    html.dark .exp-card::before { background: #f0efec; }
+    .exp-card:hover::before { width: 100%; }
+    .exp-card:hover .card-content { color: #f0efec; }
+    html.dark .exp-card:hover .card-content { color: #252525; }
+    .card-content { position: relative; z-index: 1; transition: color 0.5s ease; }
+
+    /* Year pill */
+    .year-pill {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      padding: 4px 12px;
+      border-radius: 999px;
+      border: 1px solid currentColor;
+      opacity: 0.6;
+      display: inline-block;
+    }
+
+    /* Skill tags */
+    .skill-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      padding: 3px 10px;
+      border: 1px solid currentColor;
+      border-radius: 3px;
+      opacity: 0.55;
+      white-space: nowrap;
+      display: inline-block;
+    }
+
+    /* Stats */
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+
+    /* Marquee */
+    .marquee-track {
+      display: flex;
+      gap: 3rem;
+      animation: marquee 18s linear infinite;
+      white-space: nowrap;
+    }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22,1,0.36,1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Arrow */
+    .arrow-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.5;
+      transition: opacity 0.3s, gap 0.3s;
+    }
+    .arrow-link:hover { opacity: 1; gap: 1rem; }
+
+    /* Accent line */
+    .accent-line {
+      width: 40px;
+      height: 2px;
+      background: currentColor;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 1rem;
+      opacity: 0.4;
+    }
+
+    /* Diagonal decoration */
+    .deco-number {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(6rem, 15vw, 12rem);
+      font-weight: 900;
+      line-height: 1;
+      opacity: 0.04;
+      position: absolute;
+      right: -1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .grid-line {
+      position: absolute;
+      background: currentColor;
+      opacity: 0.06;
+    }
+
+    /* Timeline dot */
+    .tl-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: currentColor;
+      flex-shrink: 0;
+      margin-top: 6px;
+      transition: transform 0.3s;
+    }
+    .exp-card:hover .tl-dot { transform: scale(1.8); }
+
+    /* CTA button */
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 2.5rem;
+      border: 1.5px solid currentColor;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      position: relative;
+      overflow: hidden;
+      transition: color 0.4s;
+    }
+    .cta-btn::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: currentColor;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s cubic-bezier(0.77,0,0.175,1);
+      z-index: 0;
+    }
+    .cta-btn:hover::after { transform: scaleX(1); }
+    .cta-btn:hover { color: #f0efec; }
+    html.dark .cta-btn:hover { color: #252525; }
+    .cta-btn span { position: relative; z-index: 1; }
+
+    .progress-bar {
+      height: 2px;
+      background: currentColor;
+      opacity: 0.15;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      background: currentColor;
+      opacity: 1;
+      border-radius: 2px;
+      width: 0%;
+      transition: width 1.2s cubic-bezier(0.22,1,0.36,1);
+    }
+    .progress-fill.animate { width: var(--w); }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- Theme toggle -->
+  <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+    <svg id="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="display:none">
+      <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+      <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+    </svg>
+    <svg id="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </svg>
+  </button>
+
+  <main class="max-w-6xl mx-auto px-6 py-24">
+
+    <!-- Hero Header -->
+    <section class="mb-28 reveal">
+      <div class="section-label mb-6 flex items-center">
+        <span class="accent-line"></span>
+        Career Timeline / 2017–Present
+      </div>
+
+      <div class="relative">
+        <h1 class="font-display text-[clamp(3rem,10vw,8rem)] font-black leading-[0.9] tracking-tight mb-8">
+          Where I've<br/><em class="italic font-normal">worked &</em><br/>what I built.
+        </h1>
+        <!-- decorative grid lines -->
+        <div class="grid-line" style="top:0;left:0;width:1px;height:100%;"></div>
+      </div>
+
+      <p class="max-w-lg text-base opacity-60 leading-relaxed mt-8 ml-4 border-l border-current pl-6">
+        Seven years of turning complex problems into elegant digital experiences. From scrappy startups to global brands — every project sharpened a different edge.
+      </p>
+    </section>
+
+    <!-- Stats Row -->
+    <section class="mb-28 grid grid-cols-2 md:grid-cols-4 gap-px reveal" style="transition-delay:0.1s">
+      <div class="stat-box py-10 px-4 border-t border-current relative overflow-hidden group">
+        <div class="stat-num counter" data-target="47">0</div>
+        <div class="section-label mt-2">Projects Shipped</div>
+        <div class="deco-number">47</div>
+      </div>
+      <div class="stat-box py-10 px-4 border-t border-current relative overflow-hidden">
+        <div class="stat-num counter" data-target="7">0</div>
+        <div class="section-label mt-2">Years Active</div>
+        <div class="deco-number">7</div>
+      </div>
+      <div class="stat-box py-10 px-4 border-t border-current relative overflow-hidden">
+        <div class="stat-num counter" data-target="23">0</div>
+        <div class="section-label mt-2">Happy Clients</div>
+        <div class="deco-number">23</div>
+      </div>
+      <div class="stat-box py-10 px-4 border-t border-current relative overflow-hidden">
+        <div class="stat-num">∞</div>
+        <div class="section-label mt-2">Cups of Coffee</div>
+      </div>
+    </section>
+
+    <!-- Experience Cards -->
+    <section class="mb-28">
+      <div class="section-label mb-12 flex items-center reveal">
+        <span class="accent-line"></span>
+        Professional Experience
+      </div>
+
+      <!-- Card 1 -->
+      <div class="exp-card reveal" style="transition-delay:0.05s">
+        <div class="card-content grid md:grid-cols-12 gap-6 items-start px-1">
+          <div class="md:col-span-1 flex flex-col items-start gap-3">
+            <div class="tl-dot"></div>
+            <div class="year-pill">2023–Now</div>
+          </div>
+          <div class="md:col-span-5">
+            <h2 class="font-display text-3xl font-bold mb-1">Senior Frontend Engineer</h2>
+            <p class="font-mono text-sm opacity-50 mb-4">Luminary Digital · Remote</p>
+            <p class="text-sm leading-relaxed opacity-70">
+              Leading frontend architecture for a SaaS analytics platform serving 80K+ users. Rebuilt the data visualization layer from scratch, reducing load time by 64% and earning a 4.9/5 UX rating in post-launch surveys.
+            </p>
+          </div>
+          <div class="md:col-span-3 md:col-start-8">
+            <div class="section-label mb-3">Key Impact</div>
+            <div class="space-y-3">
+              <div>
+                <div class="flex justify-between text-xs font-mono mb-1"><span>Performance</span><span>64%↑</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="--w:94%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs font-mono mb-1"><span>Team Growth</span><span>×3</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="--w:78%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs font-mono mb-1"><span>UX Score</span><span>4.9/5</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="--w:98%"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="md:col-span-2 md:col-start-11 flex flex-wrap gap-2 content-start">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">D3.js</span>
+            <span class="skill-tag">GraphQL</span>
+            <span class="skill-tag">Figma</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="exp-card reveal" style="transition-delay:0.1s">
+        <div class="card-content grid md:grid-cols-12 gap-6 items-start px-1">
+          <div class="md:col-span-1 flex flex-col items-start gap-3">
+            <div class="tl-dot"></div>
+            <div class="year-pill">2021–23</div>
+          </div>
+          <div class="md:col-span-5">
+            <h2 class="font-display text-3xl font-bold mb-1">Fullstack Developer</h2>
+            <p class="font-mono text-sm opacity-50 mb-4">Nexvio Studio · Berlin (Contract)</p>
+            <p class="text-sm leading-relaxed opacity-70">
+              Delivered end-to-end solutions for 8 client projects in e-commerce, fintech, and media. Architected a headless CMS integration for a publishing brand that grew organic traffic by 210% in six months.
+            </p>
+          </div>
+          <div class="md:col-span-3 md:col-start-8">
+            <div class="section-label mb-3">Key Impact</div>
+            <div class="space-y-3">
+              <div>
+                <div class="flex justify-between text-xs font-mono mb-1"><span>Traffic Growth</span><span>210%↑</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="--w:88%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs font-mono mb-1"><span>Projects Delivered</span><span>8</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="--w:72%"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="md:col-span-2 md:col-start-11 flex flex-wrap gap-2 content-start">
+            <span class="skill-tag">Next.js</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Sanity</span>
+            <span class="skill-tag">Postgres</span>
+            <span class="skill-tag">GSAP</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="exp-card reveal" style="transition-delay:0.15s">
+        <div class="card-content grid md:grid-cols-12 gap-6 items-start px-1">
+          <div class="md:col-span-1 flex flex-col items-start gap-3">
+            <div class="tl-dot"></div>
+            <div class="year-pill">2019–21</div>
+          </div>
+          <div class="md:col-span-5">
+            <h2 class="font-display text-3xl font-bold mb-1">UI / Frontend Developer</h2>
+            <p class="font-mono text-sm opacity-50 mb-4">Arcos Agency · New York</p>
+            <p class="text-sm leading-relaxed opacity-70">
+              Built interactive campaign microsites for Fortune 500 clients including a motion-heavy product launch that garnered 1.2M visits in its first week. Championed design system standards across a 12-person team.
+            </p>
+          </div>
+          <div class="md:col-span-3 md:col-start-8">
+            <div class="section-label mb-3">Key Impact</div>
+            <div class="space-y-3">
+              <div>
+                <div class="flex justify-between text-xs font-mono mb-1"><span>Launch Traffic</span><span>1.2M</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="--w:82%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs font-mono mb-1"><span>Design Ops</span><span>+40%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="--w:60%"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="md:col-span-2 md:col-start-11 flex flex-wrap gap-2 content-start">
+            <span class="skill-tag">Vue.js</span>
+            <span class="skill-tag">Webpack</span>
+            <span class="skill-tag">SCSS</span>
+            <span class="skill-tag">Three.js</span>
+            <span class="skill-tag">Storybook</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="exp-card reveal" style="transition-delay:0.2s">
+        <div class="card-content grid md:grid-cols-12 gap-6 items-start px-1">
+          <div class="md:col-span-1 flex flex-col items-start gap-3">
+            <div class="tl-dot"></div>
+            <div class="year-pill">2017–19</div>
+          </div>
+          <div class="md:col-span-5">
+            <h2 class="font-display text-3xl font-bold mb-1">Junior Web Developer</h2>
+            <p class="font-mono text-sm opacity-50 mb-4">Freelance · Remote</p>
+            <p class="text-sm leading-relaxed opacity-70">
+              Kickstarted my career building websites for local businesses, blogs, and indie startups. Developed strong foundations in responsive design, accessibility, and cross-browser compatibility.
+            </p>
+          </div>
+          <div class="md:col-span-2 md:col-start-11 flex flex-wrap gap-2 content-start">
+            <span class="skill-tag">HTML/CSS</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">WordPress</span>
+            <span class="skill-tag">PHP</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Last border -->
+      <div class="border-t border-current opacity-40"></div>
+    </section>
+
+    <!-- Skills Proficiency -->
+    <section class="mb-28 reveal" style="transition-delay:0.05s">
+      <div class="section-label mb-12 flex items-center">
+        <span class="accent-line"></span>
+        Core Skills
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-x-16 gap-y-6">
+        <!-- Left col -->
+        <div class="space-y-5">
+          <div class="skill-row">
+            <div class="flex justify-between text-sm mb-2">
+              <span class="font-medium">React / Next.js</span>
+              <span class="font-mono text-xs opacity-50">Expert</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="--w:96%"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="flex justify-between text-sm mb-2">
+              <span class="font-medium">TypeScript</span>
+              <span class="font-mono text-xs opacity-50">Expert</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="--w:92%"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="flex justify-between text-sm mb-2">
+              <span class="font-medium">Node.js / Express</span>
+              <span class="font-mono text-xs opacity-50">Advanced</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="--w:85%"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="flex justify-between text-sm mb-2">
+              <span class="font-medium">UI Animation (GSAP / Framer)</span>
+              <span class="font-mono text-xs opacity-50">Advanced</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="--w:88%"></div></div>
+          </div>
+        </div>
+        <!-- Right col -->
+        <div class="space-y-5">
+          <div class="skill-row">
+            <div class="flex justify-between text-sm mb-2">
+              <span class="font-medium">UI/UX Design (Figma)</span>
+              <span class="font-mono text-xs opacity-50">Advanced</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="--w:82%"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="flex justify-between text-sm mb-2">
+              <span class="font-medium">Database Design (SQL/NoSQL)</span>
+              <span class="font-mono text-xs opacity-50">Advanced</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="--w:79%"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="flex justify-between text-sm mb-2">
+              <span class="font-medium">DevOps / CI-CD</span>
+              <span class="font-mono text-xs opacity-50">Proficient</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="--w:68%"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="flex justify-between text-sm mb-2">
+              <span class="font-medium">Three.js / WebGL</span>
+              <span class="font-mono text-xs opacity-50">Proficient</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="--w:65%"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee Tech Stack -->
+    <section class="mb-28 reveal overflow-hidden py-8 border-t border-b border-current" style="border-opacity:0.15">
+      <div class="flex overflow-hidden">
+        <div class="marquee-track">
+          <span class="font-mono text-xs opacity-30 uppercase tracking-widest">React</span>
+          <span class="font-display italic text-lg opacity-20">·</span>
+          <span class="font-mono text-xs opacity-30 uppercase tracking-widest">TypeScript</span>
+          <span class="font-display italic text-lg opacity-20">·</span>
+          <span class="font-mono text-xs opacity-30 uppercase tracking-widest">Next.js</span>
+          <span class="font-display italic text-lg opacity-20">·</span>
+          <span class="font-mono text-xs opacity-30 uppercase tracking-widest">Node.js</span>
+          <span class="font-display italic text-lg opacity-20">·</span>
+          <span class="font-mono text-xs opacity-30 uppercase tracking-widest">GraphQL</span>
+          <span class="font-display italic text-lg opacity-20">·</span>
+          <span class="font-mono text-xs opacity-30 uppercase tracking-widest">PostgreSQL</span>
+          <span class="font-display italic text-lg opacity-20">·</span>
+          <span class="font-mono text-xs opacity-30 uppercase tracking-widest">GSAP</span>
+          <span class="font-display italic text-lg opacity-20">·</span>
+          <span class="font-mono text-xs opacity-30 uppercase tracking-widest">Three.js</span>
+          <span class="font-display italic text-lg opacity-20">·</span>
+          <span class="font-mono text-xs opacity-30 uppercase tracking-widest">Figma</span>
+          <span class="font-display italic text-lg opacity-20">·</span>
+          <span class="font-mono text-xs opacity-30 uppercase tracking-widest">AWS</span>
+          <span class="font-display italic text-lg opacity-20">·</span>
+          <span class="font-mono text-xs opacity-30 uppercase tracking-widest">Docker</span>
+          <span class="font-display italic text-lg opacity-20">·</span>
+          <!-- Duplicated for seamless loop -->
+          <span class="font-mono text-xs opacity-30 uppercase tracking-widest">React</span>
+          <span class="font-display italic text-lg opacity-20">·</span>
+          <span class="font-mono text-xs opacity-30 uppercase tracking-widest">TypeScript</span>
+          <span class="font-display italic text-lg opacity-20">·</span>
+          <span class="font-mono text-xs opacity-30 uppercase tracking-widest">Next.js</span>
+          <span class="font-display italic text-lg opacity-20">·</span>
+          <span class="font-mono text-xs opacity-30 uppercase tracking-widest">Node.js</span>
+          <span class="font-display italic text-lg opacity-20">·</span>
+          <span class="font-mono text-xs opacity-30 uppercase tracking-widest">GraphQL</span>
+          <span class="font-display italic text-lg opacity-20">·</span>
+          <span class="font-mono text-xs opacity-30 uppercase tracking-widest">PostgreSQL</span>
+          <span class="font-display italic text-lg opacity-20">·</span>
+          <span class="font-mono text-xs opacity-30 uppercase tracking-widest">GSAP</span>
+          <span class="font-display italic text-lg opacity-20">·</span>
+          <span class="font-mono text-xs opacity-30 uppercase tracking-widest">Three.js</span>
+          <span class="font-display italic text-lg opacity-20">·</span>
+          <span class="font-mono text-xs opacity-30 uppercase tracking-widest">Figma</span>
+          <span class="font-display italic text-lg opacity-20">·</span>
+          <span class="font-mono text-xs opacity-30 uppercase tracking-widest">AWS</span>
+          <span class="font-display italic text-lg opacity-20">·</span>
+          <span class="font-mono text-xs opacity-30 uppercase tracking-widest">Docker</span>
+          <span class="font-display italic text-lg opacity-20">·</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="mb-28 reveal" style="transition-delay:0.05s">
+      <div class="section-label mb-12 flex items-center">
+        <span class="accent-line"></span>
+        What Clients Say
+      </div>
+      <div class="grid md:grid-cols-3 gap-px">
+        <div class="p-8 border border-current relative overflow-hidden group hover:bg-[#303030] dark:hover:bg-[#f0efec] transition-colors duration-500">
+          <div class="font-display text-6xl opacity-10 absolute -top-2 left-4">"</div>
+          <p class="text-sm leading-relaxed opacity-70 mb-6 relative z-10 group-hover:opacity-90 group-hover:text-[#f0efec] dark:group-hover:text-[#252525] transition-colors duration-500">
+            Delivered in half the expected time and the result was stunning. Our conversion rate jumped 38% within the first month.
+          </p>
+          <div class="font-mono text-xs opacity-40 group-hover:opacity-60 group-hover:text-[#f0efec] dark:group-hover:text-[#252525] transition-colors duration-500">— Mara Chen, CEO · Bloom Commerce</div>
+        </div>
+        <div class="p-8 border border-current relative overflow-hidden group hover:bg-[#303030] dark:hover:bg-[#f0efec] transition-colors duration-500">
+          <div class="font-display text-6xl opacity-10 absolute -top-2 left-4">"</div>
+          <p class="text-sm leading-relaxed opacity-70 mb-6 relative z-10 group-hover:opacity-90 group-hover:text-[#f0efec] dark:group-hover:text-[#252525] transition-colors duration-500">
+            Not just technically excellent — he thinks like a product designer. Best hire we've made for our frontend.
+          </p>
+          <div class="font-mono text-xs opacity-40 group-hover:opacity-60 group-hover:text-[#f0efec] dark:group-hover:text-[#252525] transition-colors duration-500">— James Okafor, CTO · Nexvio</div>
+        </div>
+        <div class="p-8 border border-current relative overflow-hidden group hover:bg-[#303030] dark:hover:bg-[#f0efec] transition-colors duration-500">
+          <div class="font-display text-6xl opacity-10 absolute -top-2 left-4">"</div>
+          <p class="text-sm leading-relaxed opacity-70 mb-6 relative z-10 group-hover:opacity-90 group-hover:text-[#f0efec] dark:group-hover:text-[#252525] transition-colors duration-500">
+            The microsite he built went viral before launch. A rare mix of technical mastery and design sensibility.
+          </p>
+          <div class="font-mono text-xs opacity-40 group-hover:opacity-60 group-hover:text-[#f0efec] dark:group-hover:text-[#252525] transition-colors duration-500">— Sofia Ramos, Head of Marketing · Arcos</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="reveal text-center py-20 border-t border-current" style="transition-delay:0.05s">
+      <div class="section-label mb-8 inline-block">Let's Build Something</div>
+      <h2 class="font-display text-[clamp(2.5rem,8vw,6rem)] font-black leading-tight mb-10">
+        Available for<br/><em class="italic font-normal">new projects.</em>
+      </h2>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="#" class="cta-btn"><span>View Portfolio</span><span>→</span></a>
+        <a href="#" class="arrow-link">
+          <span>Download CV</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        </a>
+      </div>
+      <div class="font-mono text-xs opacity-30 mt-12">hello@yourname.dev</div>
+    </section>
+  </main>
+
+  <script>
+    // ── Dark mode toggle ──────────────────────────────────────────
+    function toggleTheme() {
+      const html = document.documentElement;
+      html.classList.toggle('dark');
+      const isDark = html.classList.contains('dark');
+      document.getElementById('sun-icon').style.display = isDark ? 'block' : 'none';
+      document.getElementById('moon-icon').style.display = isDark ? 'none' : 'block';
+    }
+
+    // ── Scroll reveal ─────────────────────────────────────────────
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          revealObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => revealObs.observe(el));
+
+    // ── Progress bar animation ────────────────────────────────────
+    const fills = document.querySelectorAll('.progress-fill');
+    const fillObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('animate'), 200);
+          fillObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    fills.forEach(el => fillObs.observe(el));
+
+    // ── Counter animation ─────────────────────────────────────────
+    const counters = document.querySelectorAll('.counter');
+    const countObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const target = +e.target.dataset.target;
+        const duration = 1400;
+        const start = performance.now();
+        function tick(now) {
+          const p = Math.min((now - start) / duration, 1);
+          const ease = 1 - Math.pow(1 - p, 4);
+          e.target.textContent = Math.floor(ease * target);
+          if (p < 1) requestAnimationFrame(tick);
+          else e.target.textContent = target;
+        }
+        requestAnimationFrame(tick);
+        countObs.unobserve(e.target);
+      });
+    }, { threshold: 0.6 });
+    counters.forEach(el => countObs.observe(el));
+
+    // ── Cursor glow effect ────────────────────────────────────────
+    const glow = document.createElement('div');
+    Object.assign(glow.style, {
+      position:'fixed', width:'300px', height:'300px',
+      borderRadius:'50%', pointerEvents:'none', zIndex:'9998',
+      background:'radial-gradient(circle, rgba(48,48,48,0.06) 0%, transparent 70%)',
+      transform:'translate(-50%,-50%)', transition:'opacity 0.3s',
+      top:'0', left:'0'
+    });
+    document.body.appendChild(glow);
+    document.addEventListener('mousemove', e => {
+      glow.style.left = e.clientX + 'px';
+      glow.style.top  = e.clientY + 'px';
+    });
+
+    // Update glow for dark mode
+    function updateGlow() {
+      const dark = document.documentElement.classList.contains('dark');
+      glow.style.background = dark
+        ? 'radial-gradient(circle, rgba(240,239,236,0.06) 0%, transparent 70%)'
+        : 'radial-gradient(circle, rgba(48,48,48,0.06) 0%, transparent 70%)';
+    }
+    document.documentElement.addEventListener('DOMAttrModified', updateGlow);
+    const origToggle = window.toggleTheme;
+    window.toggleTheme = function() { origToggle(); updateGlow(); };
+  </script>
+</body>
+</html>
